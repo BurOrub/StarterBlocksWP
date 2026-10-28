@@ -13,12 +13,221 @@
             "classica": "Classica",
             "masonry": "Masonry",
             "blocchi": "A blocchi",
-            "sfalsata": "Sfalsata"
+            "sfalsata": "Sfalsata",
+            "elenco": "Elenco"
         },
         "default_value": "classica",
         "return_format": "value",
         "multiple": 0,
         "width": 100
+    },
+    {
+        "key": "field_stpj_el_align",
+        "name": "elenco_allineamento",
+        "label": "Elenco: versione",
+        "type": "button_group",
+        "choices": {
+            "centro": "Nome al centro",
+            "sinistra": "Nome a sinistra"
+        },
+        "default_value": "centro",
+        "conditional_logic": [
+            [
+                {
+                    "field": "field_stpj_visual",
+                    "operator": "==",
+                    "value": "elenco"
+                }
+            ]
+        ]
+    },
+    {
+        "key": "field_stpj_el_dx",
+        "name": "elenco_destra",
+        "label": "Elenco: cosa mostrare a destra",
+        "type": "select",
+        "choices": {
+            "riassunto": "Riassunto",
+            "anno": "Anno di pubblicazione",
+            "freccia": "Freccia",
+            "nessuno": "Niente"
+        },
+        "default_value": "riassunto",
+        "conditional_logic": [
+            [
+                {
+                    "field": "field_stpj_visual",
+                    "operator": "==",
+                    "value": "elenco"
+                },
+                {
+                    "field": "field_stpj_el_align",
+                    "operator": "!=",
+                    "value": "sinistra"
+                }
+            ]
+        ]
+    },
+    {
+        "key": "field_stpj_el_tilt",
+        "name": "elenco_inclinata",
+        "label": "Elenco: copertina inclinata",
+        "type": "true_false",
+        "default_value": 1,
+        "conditional_logic": [
+            [
+                {
+                    "field": "field_stpj_visual",
+                    "operator": "==",
+                    "value": "elenco"
+                },
+                {
+                    "field": "field_stpj_el_align",
+                    "operator": "==",
+                    "value": "sinistra"
+                }
+            ]
+        ]
+    },
+    {
+        "key": "field_stpj_el_lines",
+        "name": "elenco_linee",
+        "label": "Elenco: linee tra le righe",
+        "type": "true_false",
+        "default_value": 1,
+        "conditional_logic": [
+            [
+                {
+                    "field": "field_stpj_visual",
+                    "operator": "==",
+                    "value": "elenco"
+                }
+            ]
+        ]
+    },
+    {
+        "key": "field_stpj_el_full",
+        "name": "elenco_full",
+        "label": "Elenco: a tutta la larghezza dello schermo",
+        "type": "true_false",
+        "default_value": 1,
+        "conditional_logic": [
+            [
+                {
+                    "field": "field_stpj_visual",
+                    "operator": "==",
+                    "value": "elenco"
+                }
+            ]
+        ]
+    },
+    {
+        "key": "field_stpj_el_bg",
+        "name": "elenco_colore_sfondo",
+        "label": "Elenco: colore della riga al passaggio",
+        "type": "select",
+        "choices": {
+            "": "Predefinito",
+            "slot_1": "Background",
+            "slot_2": "Testo",
+            "slot_3": "Primario",
+            "slot_4": "Secondario",
+            "slot_5": "Accento",
+            "slot_6": "Secondario Accenteo"
+        },
+        "conditional_logic": [
+            [
+                {
+                    "field": "field_stpj_visual",
+                    "operator": "==",
+                    "value": "elenco"
+                }
+            ]
+        ]
+    },
+    {
+        "key": "field_stpj_el_fg",
+        "name": "elenco_colore_testo",
+        "label": "Elenco: colore del testo al passaggio",
+        "type": "select",
+        "choices": {
+            "": "Predefinito",
+            "slot_1": "Background",
+            "slot_2": "Testo",
+            "slot_3": "Primario",
+            "slot_4": "Secondario",
+            "slot_5": "Accento",
+            "slot_6": "Secondario Accenteo"
+        },
+        "conditional_logic": [
+            [
+                {
+                    "field": "field_stpj_visual",
+                    "operator": "==",
+                    "value": "elenco"
+                }
+            ]
+        ]
+    },
+    {
+        "key": "field_stpj_el_tag",
+        "name": "elenco_titolo_tag",
+        "label": "Elenco: tag HTML del nome",
+        "type": "select",
+        "choices": {
+            "h1": "H1",
+            "h2": "H2",
+            "h3": "H3",
+            "h4": "H4",
+            "h5": "H5",
+            "h6": "H6",
+            "p": "Paragrafo",
+            "span": "Span"
+        },
+        "default_value": "h2",
+        "conditional_logic": [
+            [
+                {
+                    "field": "field_stpj_visual",
+                    "operator": "==",
+                    "value": "elenco"
+                }
+            ]
+        ]
+    },
+    {
+        "key": "field_stpj_el_size",
+        "name": "elenco_titolo_dimensione",
+        "label": "Elenco: dimensione del nome",
+        "type": "select",
+        "choices": {
+            "Titoli del tema": {
+                "display": "Titolo grande (hero) — 56–104 px",
+                "title-1": "Titolo 1 (H1) — 44–80 px",
+                "title-2": "Titolo 2 (H2) — 36–56 px",
+                "title-3": "Titolo 3 (H3) — 28–40 px",
+                "title-4": "Titolo 4 (H4) — 24–32 px",
+                "title-5": "Titolo 5 (H5) — 18–20 px",
+                "eyebrow": "Titolo 6 / etichetta (H6) — 13 px"
+            },
+            "Misure di Gutenberg": {
+                "xx-large": "XXL (frase in evidenza) — 32–52 px",
+                "x-large": "XL (testo in evidenza) — 22–28 px",
+                "large": "Grande (testo introduttivo) — 19–22 px",
+                "medium": "Media (testo) — 17–18 px",
+                "small": "Piccola — 15 px"
+            }
+        },
+        "default_value": "title-2",
+        "conditional_logic": [
+            [
+                {
+                    "field": "field_stpj_visual",
+                    "operator": "==",
+                    "value": "elenco"
+                }
+            ]
+        ]
     },
     {
         "key": "field_stpj_per_pagina",

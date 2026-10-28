@@ -24,7 +24,7 @@ $starter_flag = static function ( $name ) {
 };
 
 // Visualizzazione e griglia (scheda Layout). I blocchi salvati prima valgono "classica", 3 colonne, 20px.
-$starter_layout = in_array( (string) starter_bf( 'visualizzazione' ), array( 'classica', 'masonry', 'blocchi', 'sfalsata' ), true ) ? (string) starter_bf( 'visualizzazione' ) : 'classica';
+$starter_layout = in_array( (string) starter_bf( 'visualizzazione' ), array( 'classica', 'masonry', 'blocchi', 'sfalsata', 'elenco' ), true ) ? (string) starter_bf( 'visualizzazione' ) : 'classica';
 $starter_px     = static function ( $name, $max = 120 ) {
 	$value = starter_bf( $name );
 
@@ -39,6 +39,23 @@ $starter_grid   = array(
 	'ratio'    => in_array( (string) starter_bf( 'proporzione' ), array( '16-9', '3-2', '4-3', '1-1', '4-5' ), true ) ? (string) starter_bf( 'proporzione' ) : '4-3',
 	'fourth'   => (bool) starter_bf( 'quarto_elemento' ),
 );
+// Elenco (visualizzazione "Elenco"): versione, dato a destra, colori della linea al passaggio, titolo.
+$starter_row_bg  = starter_resolve_named_color( (string) starter_bf( 'elenco_colore_sfondo' ) );
+$starter_row_fg  = starter_resolve_named_color( (string) starter_bf( 'elenco_colore_testo' ) );
+$starter_row_fg  = $starter_row_fg ? $starter_row_fg : ( $starter_row_bg ? ( starter_color_is_dark( $starter_row_bg ) ? '#ffffff' : '#111111' ) : '#ffffff' );
+$starter_row     = array(
+	'align'      => 'sinistra' === starter_bf( 'elenco_allineamento' ) ? 'sinistra' : 'centro',
+	'right'      => (string) starter_bf( 'elenco_destra' ) ?: 'riassunto',
+	'lines'      => null === starter_bf( 'elenco_linee' ) ? true : (bool) starter_bf( 'elenco_linee' ),
+	'tilt'       => null === starter_bf( 'elenco_inclinata' ) ? true : (bool) starter_bf( 'elenco_inclinata' ),
+	'full'       => null === starter_bf( 'elenco_full' ) ? true : (bool) starter_bf( 'elenco_full' ),
+	'bg'         => $starter_row_bg,
+	'fg'         => $starter_row_fg,
+	'title_tag'  => (string) starter_bf( 'elenco_titolo_tag' ) ?: 'h2',
+	'title_size' => (string) starter_bf( 'elenco_titolo_dimensione' ) ?: 'title-2',
+);
+$starter_grid['row'] = $starter_row;
+
 $starter_per_page = max( 1, min( 60, (int) starter_bf( 'per_pagina' ) ?: 12 ) );
 $starter_tabs_on  = $starter_flag( 'schede' );
 $starter_counts   = $starter_flag( 'conteggi' );
@@ -151,9 +168,10 @@ $starter_wrapper = get_block_wrapper_attributes( array(
 				$starter_query->the_post();
 				ob_start();
 				get_template_part(
-					'template-parts/portfolio/card',
+					'elenco' === $starter_layout ? 'template-parts/portfolio/row' : 'template-parts/portfolio/card',
 					null,
 					array(
+						'row'       => $starter_row,
 						'cats'      => $starter_cat_style,
 						'cats_opts' => $starter_cat_opts,
 						'titles'    => $starter_title_opts,
