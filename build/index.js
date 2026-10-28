@@ -541,6 +541,7 @@
   function makeEdit(name, def) {
     const fields = def.fields;
     const tabs = splitTabs(fields);
+    const hasFields = fields.some((f) => f.name);
     const advanced = tabs.length > 1 && "Avanzate" === tabs[tabs.length - 1].label ? tabs[tabs.length - 1] : null;
     return function Edit2({ attributes, setAttributes }) {
       const data = attributes.data && !Array.isArray(attributes.data) ? attributes.data : {};
@@ -548,7 +549,7 @@
       const blockProps = useBlockProps2();
       const [modalOpen, setModalOpen] = useState3(false);
       const save = (next) => setAttributes({ data: mergeData(fields, data, next) });
-      return /* @__PURE__ */ wp.element.createElement(Fragment2, null, /* @__PURE__ */ wp.element.createElement(BlockControls2, null, /* @__PURE__ */ wp.element.createElement(ToolbarGroup2, null, /* @__PURE__ */ wp.element.createElement(ToolbarButton2, { icon: "edit", label: "Modifica contenuti", onClick: () => setModalOpen(true) }))), modalOpen && /* @__PURE__ */ wp.element.createElement(
+      return /* @__PURE__ */ wp.element.createElement(Fragment2, null, hasFields && /* @__PURE__ */ wp.element.createElement(BlockControls2, null, /* @__PURE__ */ wp.element.createElement(ToolbarGroup2, null, /* @__PURE__ */ wp.element.createElement(ToolbarButton2, { icon: "edit", label: "Modifica contenuti", onClick: () => setModalOpen(true) }))), modalOpen && /* @__PURE__ */ wp.element.createElement(
         EditModal2,
         {
           title: def.title,
@@ -560,7 +561,7 @@
           },
           onClose: () => setModalOpen(false)
         }
-      ), /* @__PURE__ */ wp.element.createElement(InspectorControls3, null, /* @__PURE__ */ wp.element.createElement(PanelBody2, { title: def.title, initialOpen: true }, /* @__PURE__ */ wp.element.createElement(Button3, { variant: "primary", onClick: () => setModalOpen(true) }, "Modifica contenuti")), advanced && /* @__PURE__ */ wp.element.createElement(PanelBody2, { title: "Avanzate", initialOpen: false }, /* @__PURE__ */ wp.element.createElement(FieldGrid, { fields: advanced.fields, scope: fields, values, columns: 1, onChange: save }))), /* @__PURE__ */ wp.element.createElement("div", { ...blockProps }, /* @__PURE__ */ wp.element.createElement(ServerSideRender2, { block: name, attributes, httpMethod: "POST" }), def.inner && /* @__PURE__ */ wp.element.createElement("div", { style: { border: "1px dashed #c3c4c7", padding: 16, margin: 16 } }, /* @__PURE__ */ wp.element.createElement("div", { style: LABEL_STYLE }, "Testo della sezione"), /* @__PURE__ */ wp.element.createElement(InnerBlocks, { template: def.inner.template }))));
+      ), /* @__PURE__ */ wp.element.createElement(InspectorControls3, null, hasFields && /* @__PURE__ */ wp.element.createElement(PanelBody2, { title: def.title, initialOpen: true }, /* @__PURE__ */ wp.element.createElement(Button3, { variant: "primary", onClick: () => setModalOpen(true) }, "Modifica contenuti")), advanced && /* @__PURE__ */ wp.element.createElement(PanelBody2, { title: "Avanzate", initialOpen: false }, /* @__PURE__ */ wp.element.createElement(FieldGrid, { fields: advanced.fields, scope: fields, values, columns: 1, onChange: save }))), /* @__PURE__ */ wp.element.createElement("div", { ...blockProps }, /* @__PURE__ */ wp.element.createElement(ServerSideRender2, { block: name, attributes, httpMethod: "POST", urlQueryArgs: { post_id: wp.data.select("core/editor") && wp.data.select("core/editor").getCurrentPostId && wp.data.select("core/editor").getCurrentPostId() || 0 } }), def.inner && /* @__PURE__ */ wp.element.createElement("div", { style: { border: "1px dashed #c3c4c7", padding: 16, margin: 16 } }, /* @__PURE__ */ wp.element.createElement("div", { style: LABEL_STYLE }, "Testo della sezione"), /* @__PURE__ */ wp.element.createElement(InnerBlocks, { template: def.inner.template }))));
     };
   }
 

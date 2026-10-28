@@ -62,7 +62,7 @@ $starter_wrapper = get_block_wrapper_attributes( array( 'class' => 'alignfull co
 						<?php endif; ?>
 
 						<?php if ( $starter_lines ) : ?>
-							<ul class="servizi__checks"<?php echo starter_live_attrs( array( 'src' => 'acflines', 'key' => 'voci_' . (int) $starter_row . '_voci_elenco' ) ); // phpcs:ignore WordPress.Security.EscapeOutput.OutputNotEscaped ?>>
+							<ul class="servizi__checks"<?php echo starter_live_attrs( array( 'src' => 'fieldlines', 'key' => 'voci_' . (int) $starter_row . '_voci_elenco' ) ); // phpcs:ignore WordPress.Security.EscapeOutput.OutputNotEscaped ?>>
 								<?php foreach ( $starter_lines as $starter_line ) : ?>
 									<li><span class="checklist__mark"><?php echo starter_icon( 'check', 14, 2.5 ); // phpcs:ignore WordPress.Security.EscapeOutput.OutputNotEscaped ?></span><?php echo esc_html( trim( $starter_line ) ); ?></li>
 								<?php endforeach; ?>

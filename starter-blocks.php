@@ -2,7 +2,7 @@
 /**
  * Plugin Name: Starter Blocks
  * Description: Blocchi custom di Gutenberg per il tema Starter.
- * Version: 0.2.0
+ * Version: 0.2.1
  * Requires PHP: 7.4
  * License: GPL v2 or later
  * License URI: https://www.gnu.org/licenses/gpl-2.0.html
@@ -22,7 +22,7 @@ require_once STARTER_POC_DIR . 'inc/engine.php';
 require_once STARTER_POC_DIR . 'inc/meta.php';
 
 /**
- * Righe del repeater "voci" dai dati salvati dal blocco (stesso formato di ACF: voci = numero di righe, voci_0_voci_titolo = valore).
+ * Righe del repeater "voci" dai dati salvati dal blocco (voci = numero di righe, voci_0_voci_titolo = valore).
  *
  * @param array $data Attributo "data" del blocco.
  * @return array[] Una riga per servizio, con le chiavi dei sottocampi (voci_id, voci_titolo…).

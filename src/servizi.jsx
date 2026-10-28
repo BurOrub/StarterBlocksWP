@@ -1,7 +1,7 @@
 /**
  * Blocco "Elenco servizi" (starter-theme/elenco-servizi), in React: ha preso il posto del blocco con lo stesso nome.
  *
- * Nessuna dipendenza da ACF. Salva nell'attributo "data" lo stesso formato del blocco
+ * Salva nell'attributo "data" lo stesso formato del blocco
  * (voci = numero di righe; voci_0_voci_titolo = valore; _voci_0_voci_titolo = chiave del campo),
  * quindi legge i contenuti già salvati e, volendo, si può tornare al blocco.
  * Il disegno (anteprima e sito) lo fa il PHP: templates/elenco-servizi.php.

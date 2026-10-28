@@ -2,7 +2,7 @@
  * Motore dei blocchi: dall'elenco dei campi di un blocco (blocks/<nome>/fields.json, passato dal PHP in starterBlocksDefs)
  * disegna il pannello di modifica. Un blocco in più non richiede codice JavaScript: basta la cartella in blocks/.
  *
- * I valori si salvano nell'attributo "data" nel formato di ACF (campo = valore; ripetitore = numero di righe + nome_0_sottocampo;
+ * I valori si salvano nell'attributo "data" nel formato (campo = valore; ripetitore = numero di righe + nome_0_sottocampo;
  * _campo = chiave del campo), così le pagine già scritte si leggono senza conversioni.
  */
 import { toChoices, IconField, ImageField, LinkField } from './shared';
@@ -489,6 +489,7 @@ export function EditModal( { title, fields, initial, onSave, onClose } ) {
 export function makeEdit( name, def ) {
 	const fields = def.fields;
 	const tabs = splitTabs( fields );
+	const hasFields = fields.some( ( f ) => f.name );
 	const advanced = tabs.length > 1 && 'Avanzate' === tabs[ tabs.length - 1 ].label ? tabs[ tabs.length - 1 ] : null;
 
 	return function Edit( { attributes, setAttributes } ) {
@@ -500,11 +501,13 @@ export function makeEdit( name, def ) {
 
 		return (
 			<Fragment>
-				<BlockControls>
-					<ToolbarGroup>
-						<ToolbarButton icon="edit" label="Modifica contenuti" onClick={ () => setModalOpen( true ) } />
-					</ToolbarGroup>
-				</BlockControls>
+				{ hasFields && (
+					<BlockControls>
+						<ToolbarGroup>
+							<ToolbarButton icon="edit" label="Modifica contenuti" onClick={ () => setModalOpen( true ) } />
+						</ToolbarGroup>
+					</BlockControls>
+				) }
 				{ modalOpen && (
 					<EditModal
 						title={ def.title }
@@ -515,9 +518,11 @@ export function makeEdit( name, def ) {
 					/>
 				) }
 				<InspectorControls>
-					<PanelBody title={ def.title } initialOpen>
-						<Button variant="primary" onClick={ () => setModalOpen( true ) }>Modifica contenuti</Button>
-					</PanelBody>
+					{ hasFields && (
+						<PanelBody title={ def.title } initialOpen>
+							<Button variant="primary" onClick={ () => setModalOpen( true ) }>Modifica contenuti</Button>
+						</PanelBody>
+					) }
 					{ advanced && (
 						<PanelBody title="Avanzate" initialOpen={ false }>
 							<FieldGrid fields={ advanced.fields } scope={ fields } values={ values } columns={ 1 } onChange={ save } />
@@ -525,7 +530,7 @@ export function makeEdit( name, def ) {
 					) }
 				</InspectorControls>
 				<div { ...blockProps }>
-					<ServerSideRender block={ name } attributes={ attributes } httpMethod="POST" />
+					<ServerSideRender block={ name } attributes={ attributes } httpMethod="POST" urlQueryArgs={ { post_id: ( wp.data.select( 'core/editor' ) && wp.data.select( 'core/editor' ).getCurrentPostId && wp.data.select( 'core/editor' ).getCurrentPostId() ) || 0 } } />
 					{ def.inner && (
 						<div style={ { border: '1px dashed #c3c4c7', padding: 16, margin: 16 } }>
 							<div style={ LABEL_STYLE }>Testo della sezione</div>

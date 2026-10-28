@@ -1,0 +1,30 @@
+{
+	"apiVersion": 3,
+	"name": "starter-theme/progetto-testata",
+	"title": "Progetto — testata",
+	"description": "Anteprima in sola lettura di copertina, titolo e dati del progetto, presa dai dettagli del progetto. Non si stampa nel sito: la scheda mostra già la testata.",
+	"category": "starter",
+	"icon": "align-full-width",
+	"keywords": [
+		"progetto",
+		"portfolio",
+		"testata",
+		"copertina"
+	],
+	"supports": {
+		"align": [
+			"full"
+		],
+		"inserter": false,
+		"multiple": false,
+		"customClassName": false,
+		"html": false
+	},
+	"textdomain": "slug-theme",
+	"attributes": {
+		"align": {
+			"type": "string",
+			"default": "full"
+		}
+	}
+}

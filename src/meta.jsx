@@ -1,6 +1,6 @@
 /**
- * Riquadro dei campi di un contenuto (Portfolio, Immobile) nella schermata di modifica: schede e campi disegnati dal motore, al posto di ACF.
- * I valori vanno in un campo nascosto (JSON) che il PHP salva nel meta con gli stessi nomi di ACF (inc/meta.php).
+ * Riquadro dei campi di un contenuto (Portfolio, Immobile) nella schermata di modifica: schede e campi disegnati dal motore, 
+ * I valori vanno in un campo nascosto (JSON) che il PHP salva nel meta (inc/meta.php).
  */
 import { readFields, mergeData, InlineFields } from './engine';
 

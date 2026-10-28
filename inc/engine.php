@@ -3,7 +3,7 @@
  * Motore dei blocchi: ogni cartella in blocks/ ha block.json, fields.json (l'elenco dei campi, da cui l'editor disegna il pannello)
  * e render.php (il disegno, che legge i campi con starter_bf( 'nome' )).
  *
- * I contenuti stanno nell'attributo "data" del blocco, nel formato che usava ACF: campo = valore, ripetitore = numero di righe + nome_0_sottocampo.
+ * I contenuti stanno nell'attributo "data" del blocco, nel formato: campo = valore, ripetitore = numero di righe + nome_0_sottocampo.
  * Per questo le pagine già scritte si leggono senza conversioni.
  *
  * @package Starter_Blocks_POC
@@ -82,7 +82,7 @@ function starter_blocks_live_choices( array $fields ) {
 	return $fields;
 }
 
-/* Un allegato come lo restituiva ACF col formato "array". */
+/* Un allegato nel formato "array" (id, url, alt, misure…). */
 function starter_blocks_attachment( $id ) {
 	$id   = (int) $id;
 	$post = $id ? get_post( $id ) : null;
@@ -114,7 +114,7 @@ function starter_blocks_attachment( $id ) {
 		$out['height'] = (int) $meta['height'];
 	}
 
-	// Misure registrate: sizes[ 'large' ] = url, sizes[ 'large-width' ], sizes[ 'large-height' ] (come ACF).
+	// Misure registrate: sizes[ 'large' ] = url, sizes[ 'large-width' ], sizes[ 'large-height' ].
 	if ( 'image' === ( $out['type'] ?? '' ) ) {
 		$out['sizes'] = array();
 
@@ -179,7 +179,7 @@ function starter_blocks_value( array $field, array $data, $prefix ) {
 				$item_id = is_array( $item ) ? (int) ( $item['ID'] ?? $item['id'] ?? 0 ) : (int) $item;
 
 				if ( ! $item_id || 'attachment' !== get_post_type( $item_id ) ) {
-					continue; // Come ACF: le foto tolte dalla Libreria non compaiono.
+					continue; // Le foto tolte dalla Libreria non compaiono.
 				}
 
 				$value = starter_blocks_media_value( $item, $field['return_format'] ?? 'array' );
@@ -235,7 +235,7 @@ function starter_blocks_value( array $field, array $data, $prefix ) {
 				return is_array( $raw ) ? array_values( $raw ) : array();
 			}
 
-			return $raw; // Mai salvato = null, come in ACF: certi disegni distinguono "non scelto" da "vuoto".
+			return $raw; // Mai salvato = null: certi disegni distinguono "non scelto" da "vuoto".
 
 		default:
 			return $raw;
@@ -261,7 +261,7 @@ function starter_bf_active() {
 	return ! empty( $GLOBALS['starter_blocks_ctx'] );
 }
 
-/* Il valore di un campo del blocco che si sta disegnando (al posto di get_field() di ACF). $raw = valore salvato, senza trasformazioni. */
+/* Il valore di un campo del blocco che si sta disegnando. $raw = valore salvato, senza trasformazioni. */
 function starter_bf( $name, $raw = false ) {
 	$ctx = $GLOBALS['starter_blocks_ctx'] ?? null;
 
@@ -311,7 +311,7 @@ function starter_blocks_render( $attributes, $content, $wp_block ) {
 	$data       = isset( $attributes['data'] ) && is_array( $attributes['data'] ) ? $attributes['data'] : array();
 	$is_preview = defined( 'REST_REQUEST' ) && REST_REQUEST; // Richiesta dell'anteprima nell'editor.
 	$previous   = $GLOBALS['starter_blocks_ctx'] ?? null;
-	$block      = array( // Come lo passava ACF ai disegni: l'id serve a dare un nome unico agli elementi (es. lo scorrimento delle recensioni).
+	$block      = array( // Dati del blocco per i disegni: l'id serve a dare un nome unico agli elementi (es. lo scorrimento delle recensioni).
 		'id'   => ! empty( $attributes['id'] ) ? $attributes['id'] : starter_blocks_auto_id( $data ),
 		'name' => $wp_block->name,
 		'data' => $data,

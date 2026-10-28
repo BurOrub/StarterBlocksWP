@@ -1,7 +1,7 @@
 <?php
 /**
  * Campi dei contenuti (Portfolio, Immobili, dati del consulente): stesso motore dei blocchi, ma i valori stanno nel meta dell'articolo o
- * del termine. I nomi dei meta sono quelli che usava ACF (campo = valore; ripetitore = numero di righe + nome_0_sottocampo; _campo = chiave),
+ * del termine. I nomi dei meta sono questi (campo = valore; ripetitore = numero di righe + nome_0_sottocampo; _campo = chiave),
  * quindi i contenuti già scritti si leggono senza conversioni.
  *
  * - meta/<nome>.json: elenco dei campi e dove compaiono (tipo di contenuto o tassonomia).
@@ -39,7 +39,7 @@ function starter_meta_registry() {
 	return $registry;
 }
 
-/* Definizione di un campo dalla sua chiave (blocchi e contenuti): lo usa Starter Live al posto di acf_get_field(). */
+/* Definizione di un campo dalla sua chiave (blocchi e contenuti): lo usa Starter Live. */
 function starter_field_def( $key ) {
 	static $index = null;
 
@@ -79,7 +79,7 @@ function starter_meta_target( $ref ) {
 		return array( 'post', (int) $ref->ID, $ref->post_type );
 	}
 
-	// Termine nel formato di ACF: "tassonomia_12".
+	// Termine nel formato: "tassonomia_12".
 	if ( is_string( $ref ) && preg_match( '/^([a-z0-9_\-]+)_(\d+)$/i', $ref, $m ) && 'term' !== $m[1] && taxonomy_exists( $m[1] ) ) {
 		return array( 'term', (int) $m[2], $m[1] );
 	}
@@ -122,7 +122,7 @@ function starter_meta_all( $kind, $id ) {
 	return $data;
 }
 
-/* Un campo di un articolo o di un termine, come lo restituiva ACF (get_field). */
+/* Un campo di un articolo o di un termine. */
 function starter_meta_get( $name, $ref = null ) {
 	if ( null === $ref ) {
 		$ref = get_the_ID();
