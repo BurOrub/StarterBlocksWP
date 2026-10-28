@@ -1,0 +1,42 @@
+{
+	"apiVersion": 3,
+	"name": "starter-theme/progetto-media",
+	"title": "Progetto — media",
+	"description": "Immagini e video di una scheda progetto in 1, 2 o 3 colonne: per ogni elemento si sceglie se è un'immagine o un video.",
+	"category": "starter",
+	"icon": "format-gallery",
+	"keywords": [
+		"progetto",
+		"portfolio",
+		"media",
+		"immagini"
+	],
+	"supports": {
+		"align": [
+			"full"
+		],
+		"anchor": true,
+		"customClassName": true,
+		"html": false
+	},
+	"textdomain": "slug-theme",
+	"attributes": {
+		"align": {
+			"type": "string",
+			"default": "full"
+		},
+		"name": {
+			"type": "string"
+		},
+		"mode": {
+			"type": "string"
+		},
+		"data": {
+			"type": "object",
+			"default": {}
+		},
+		"id": {
+			"type": "string"
+		}
+	}
+}

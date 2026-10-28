@@ -1,0 +1,41 @@
+{
+	"apiVersion": 3,
+	"name": "starter-theme/striscia-valori",
+	"title": "Striscia valori",
+	"description": "Riga di voci con icona e titolo (es. garanzia, spedizione, assistenza).",
+	"category": "starter",
+	"icon": "editor-ul",
+	"keywords": [
+		"valori",
+		"icone",
+		"vantaggi"
+	],
+	"supports": {
+		"align": [
+			"full"
+		],
+		"anchor": true,
+		"customClassName": true,
+		"html": false
+	},
+	"textdomain": "slug-theme",
+	"attributes": {
+		"align": {
+			"type": "string",
+			"default": "full"
+		},
+		"name": {
+			"type": "string"
+		},
+		"mode": {
+			"type": "string"
+		},
+		"data": {
+			"type": "object",
+			"default": {}
+		},
+		"id": {
+			"type": "string"
+		}
+	}
+}

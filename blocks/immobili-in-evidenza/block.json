@@ -1,0 +1,40 @@
+{
+	"apiVersion": 3,
+	"name": "starter-theme/immobili-in-evidenza",
+	"title": "Immobili — In evidenza",
+	"description": "Griglia con i 3 immobili più recenti con Evidenza = In evidenza home.",
+	"category": "starter",
+	"icon": "building",
+	"keywords": [
+		"immobili",
+		"evidenza",
+		"home"
+	],
+	"supports": {
+		"align": [
+			"full"
+		],
+		"anchor": true,
+		"customClassName": true
+	},
+	"textdomain": "slug-theme",
+	"attributes": {
+		"align": {
+			"type": "string",
+			"default": "full"
+		},
+		"name": {
+			"type": "string"
+		},
+		"mode": {
+			"type": "string"
+		},
+		"data": {
+			"type": "object",
+			"default": {}
+		},
+		"id": {
+			"type": "string"
+		}
+	}
+}

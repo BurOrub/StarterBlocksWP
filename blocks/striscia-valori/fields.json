@@ -1,0 +1,111 @@
+[
+    {
+        "key": "field_stsv_voci",
+        "name": "voci",
+        "label": "Voci",
+        "type": "repeater",
+        "min": 1,
+        "max": 6,
+        "button_label": "Aggiungi voce",
+        "layout": "table",
+        "sub_fields": [
+            {
+                "key": "field_stsv_icona",
+                "name": "icona",
+                "label": "Icona",
+                "type": "starter_icon",
+                "default_value": "star"
+            },
+            {
+                "key": "field_stsv_titolo",
+                "name": "titolo",
+                "label": "Titolo",
+                "type": "text"
+            }
+        ]
+    },
+    {
+        "key": "field_stsv_layout_tab",
+        "label": "Layout",
+        "type": "tab"
+    },
+    {
+        "key": "field_stsv_larghezza",
+        "name": "larghezza",
+        "label": "Larghezza",
+        "type": "button_group",
+        "choices": {
+            "contenuta": "Normale (voci nel contenuto, bordi a tutta larghezza)",
+            "full": "Full width (tutto a tutta larghezza)"
+        },
+        "default_value": "contenuta"
+    },
+    {
+        "key": "field_stsv_colonne",
+        "name": "colonne",
+        "label": "Colonne su desktop",
+        "type": "select",
+        "choices": {
+            "2": "2",
+            "3": "3",
+            "4": "4",
+            "5": "5",
+            "6": "6"
+        },
+        "default_value": "4"
+    },
+    {
+        "key": "field_stsv_colonne_tablet",
+        "name": "colonne_tablet",
+        "label": "Colonne su tablet",
+        "type": "select",
+        "choices": {
+            "1": "1",
+            "2": "2",
+            "3": "3",
+            "4": "4"
+        },
+        "default_value": "2"
+    },
+    {
+        "key": "field_stsv_colonne_mobile",
+        "name": "colonne_mobile",
+        "label": "Colonne su mobile",
+        "type": "select",
+        "choices": {
+            "1": "1",
+            "2": "2"
+        },
+        "default_value": "2"
+    },
+    {
+        "key": "field_group_starter_striscia_valori_adv_tab",
+        "label": "Avanzate",
+        "type": "tab"
+    },
+    {
+        "key": "field_group_starter_striscia_valori_adv_bg",
+        "name": "sfondo_sezione",
+        "label": "Sfondo della sezione",
+        "type": "select",
+        "choices": {
+            "": "Nessuno",
+            "chiaro": "Chiaro (grigio leggero)",
+            "slot_1": "Background",
+            "slot_2": "Testo",
+            "slot_3": "Primario",
+            "slot_4": "Secondario",
+            "slot_5": "Accento",
+            "slot_6": "Secondario Accenteo"
+        },
+        "return_format": "value",
+        "multiple": 0
+    },
+    {
+        "key": "field_group_starter_striscia_valori_adv_classes",
+        "name": "classi_custom",
+        "label": "Classi CSS personalizzate",
+        "type": "text",
+        "placeholder": "mt2 pb4 pb2-sma"
+    }
+]

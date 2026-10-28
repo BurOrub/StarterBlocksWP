@@ -1,0 +1,41 @@
+{
+	"apiVersion": 3,
+	"name": "starter-theme/instagram",
+	"title": "Instagram",
+	"description": "Foto statiche dal profilo con link (nessun collegamento esterno).",
+	"category": "starter",
+	"icon": "instagram",
+	"keywords": [
+		"instagram",
+		"social",
+		"foto"
+	],
+	"supports": {
+		"align": [
+			"full"
+		],
+		"anchor": true,
+		"customClassName": true,
+		"html": false
+	},
+	"textdomain": "slug-theme",
+	"attributes": {
+		"align": {
+			"type": "string",
+			"default": "full"
+		},
+		"name": {
+			"type": "string"
+		},
+		"mode": {
+			"type": "string"
+		},
+		"data": {
+			"type": "object",
+			"default": {}
+		},
+		"id": {
+			"type": "string"
+		}
+	}
+}

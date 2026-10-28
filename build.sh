@@ -4,3 +4,4 @@
 cd "$(dirname "$0")"
 ESB="${1:-../../themes/starter-theme/node_modules/.bin/esbuild}"
 "$ESB" src/index.jsx --bundle --format=iife --jsx=transform --jsx-factory=wp.element.createElement --jsx-fragment=wp.element.Fragment --target=es2019 --outfile=build/index.js --log-level=warning
+"$ESB" src/meta.jsx --bundle --format=iife --jsx=transform --jsx-factory=wp.element.createElement --jsx-fragment=wp.element.Fragment --target=es2019 --outfile=build/meta.js --log-level=warning

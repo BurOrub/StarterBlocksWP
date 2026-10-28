@@ -1,0 +1,42 @@
+{
+	"apiVersion": 3,
+	"name": "starter-theme/hero-split",
+	"title": "Hero testo + foto",
+	"description": "Prima sezione della pagina: occhiello, titolo, testo, due pulsanti e una foto a lato.",
+	"category": "starter",
+	"icon": "cover-image",
+	"keywords": [
+		"hero",
+		"testo",
+		"foto",
+		"home"
+	],
+	"supports": {
+		"align": [
+			"full"
+		],
+		"anchor": true,
+		"customClassName": true,
+		"html": false
+	},
+	"textdomain": "slug-theme",
+	"attributes": {
+		"align": {
+			"type": "string",
+			"default": "full"
+		},
+		"name": {
+			"type": "string"
+		},
+		"mode": {
+			"type": "string"
+		},
+		"data": {
+			"type": "object",
+			"default": {}
+		},
+		"id": {
+			"type": "string"
+		}
+	}
+}

@@ -1,0 +1,89 @@
+[
+    {
+        "key": "field_stpc_titolo",
+        "name": "titolo",
+        "label": "Titolo",
+        "type": "text",
+        "default_value": "Collaboratori"
+    },
+    {
+        "key": "field_tag_3099d63c2968",
+        "name": "titolo_tag",
+        "label": "Tag HTML del titolo",
+        "type": "select",
+        "choices": {
+            "auto": "Automatico (consigliato)",
+            "h1": "H1",
+            "h2": "H2",
+            "h3": "H3",
+            "h4": "H4",
+            "h5": "H5",
+            "h6": "H6",
+            "span": "span",
+            "p": "p"
+        },
+        "default_value": "auto",
+        "return_format": "value",
+        "multiple": 0
+    },
+    {
+        "key": "field_stpc_voci",
+        "name": "voci",
+        "label": "Crediti",
+        "type": "repeater",
+        "min": 0,
+        "max": 0,
+        "button_label": "Aggiungi credito",
+        "layout": "table",
+        "sub_fields": [
+            {
+                "key": "field_stpc_ruolo",
+                "name": "voci_ruolo",
+                "label": "Ruolo",
+                "type": "text"
+            },
+            {
+                "key": "field_stpc_nome",
+                "name": "voci_nome",
+                "label": "Nome",
+                "type": "text"
+            },
+            {
+                "key": "field_stpc_link",
+                "name": "voci_link",
+                "label": "Link",
+                "type": "url"
+            }
+        ]
+    },
+    {
+        "key": "field_group_starter_progetto_crediti_adv_tab",
+        "label": "Avanzate",
+        "type": "tab"
+    },
+    {
+        "key": "field_group_starter_progetto_crediti_adv_bg",
+        "name": "sfondo_sezione",
+        "label": "Sfondo della sezione",
+        "type": "select",
+        "choices": {
+            "": "Nessuno",
+            "chiaro": "Chiaro (grigio leggero)",
+            "slot_1": "Background",
+            "slot_2": "Testo",
+            "slot_3": "Primario",
+            "slot_4": "Secondario",
+            "slot_5": "Accento",
+            "slot_6": "Secondario Accenteo"
+        },
+        "return_format": "value",
+        "multiple": 0
+    },
+    {
+        "key": "field_group_starter_progetto_crediti_adv_classes",
+        "name": "classi_custom",
+        "label": "Classi CSS personalizzate",
+        "type": "text",
+        "placeholder": "mt2 pb4 pb2-sma"
+    }
+]

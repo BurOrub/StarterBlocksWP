@@ -1,0 +1,124 @@
+[
+    {
+        "key": "field_hh_info",
+        "label": "Immobile in hero",
+        "type": "message",
+        "message": "Immagine e card della hero vengono dall'immobile più recente con Evidenza = “Hero home”: si usa il campo “Immagine hero” della scheda, altrimenti l'immagine in evidenza."
+    },
+    {
+        "key": "field_hh_occhiello",
+        "name": "occhiello",
+        "label": "Occhiello (H1 della pagina)",
+        "type": "text"
+    },
+    {
+        "key": "field_tag_6a8533ff60e2",
+        "name": "occhiello_tag",
+        "label": "Tag HTML dell'occhiello",
+        "type": "select",
+        "choices": {
+            "auto": "Automatico (consigliato)",
+            "h1": "H1",
+            "h2": "H2",
+            "h3": "H3",
+            "h4": "H4",
+            "h5": "H5",
+            "h6": "H6",
+            "span": "span",
+            "p": "p"
+        },
+        "default_value": "auto",
+        "return_format": "value",
+        "multiple": 0
+    },
+    {
+        "key": "field_hh_titolo",
+        "name": "titolo",
+        "label": "Titolo grande",
+        "type": "textarea",
+        "rows": 3
+    },
+    {
+        "key": "field_tag_c5714cc557b1",
+        "name": "titolo_tag",
+        "label": "Tag HTML del titolo",
+        "type": "select",
+        "choices": {
+            "auto": "Automatico (consigliato)",
+            "h1": "H1",
+            "h2": "H2",
+            "h3": "H3",
+            "h4": "H4",
+            "h5": "H5",
+            "h6": "H6",
+            "span": "span",
+            "p": "p"
+        },
+        "default_value": "auto",
+        "return_format": "value",
+        "multiple": 0
+    },
+    {
+        "key": "field_hh_testo",
+        "name": "testo",
+        "label": "Testo",
+        "type": "textarea",
+        "rows": 4
+    },
+    {
+        "key": "field_hh_cta_primaria",
+        "name": "cta_primaria",
+        "label": "Pulsante principale",
+        "type": "link",
+        "return_format": "array"
+    },
+    {
+        "key": "field_btn_c7c992a9b258",
+        "name": "cta_primaria_stile",
+        "label": "Stile del pulsante",
+        "type": "select",
+        "choices": {
+            "": "Predefinito del blocco",
+            "pieno-1": "Pieno 1",
+            "contorno-1": "Contorno 1",
+            "pieno-2": "Pieno 2",
+            "contorno-2": "Contorno 2"
+        },
+        "return_format": "value",
+        "multiple": 0
+    },
+    {
+        "key": "field_hh_cta_secondaria",
+        "name": "cta_secondaria",
+        "label": "Pulsante secondario",
+        "type": "link",
+        "return_format": "array"
+    },
+    {
+        "key": "field_btn_905dd23dac7f",
+        "name": "cta_secondaria_stile",
+        "label": "Stile del pulsante",
+        "type": "select",
+        "choices": {
+            "": "Predefinito del blocco",
+            "pieno-1": "Pieno 1",
+            "contorno-1": "Contorno 1",
+            "pieno-2": "Pieno 2",
+            "contorno-2": "Contorno 2"
+        },
+        "return_format": "value",
+        "multiple": 0
+    },
+    {
+        "key": "field_group_starter_hero_home_adv_tab",
+        "label": "Avanzate",
+        "type": "tab"
+    },
+    {
+        "key": "field_group_starter_hero_home_adv_classes",
+        "name": "classi_custom",
+        "label": "Classi CSS personalizzate",
+        "type": "text",
+        "placeholder": "mt2 pb4 pb2-sma"
+    }
+]

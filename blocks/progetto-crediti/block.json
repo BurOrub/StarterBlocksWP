@@ -1,0 +1,42 @@
+{
+	"apiVersion": 3,
+	"name": "starter-theme/progetto-crediti",
+	"title": "Progetto — crediti",
+	"description": "Elenco di ruoli e nomi dei collaboratori di un progetto.",
+	"category": "starter",
+	"icon": "groups",
+	"keywords": [
+		"progetto",
+		"portfolio",
+		"crediti",
+		"collaboratori"
+	],
+	"supports": {
+		"align": [
+			"full"
+		],
+		"anchor": true,
+		"customClassName": true,
+		"html": false
+	},
+	"textdomain": "slug-theme",
+	"attributes": {
+		"align": {
+			"type": "string",
+			"default": "full"
+		},
+		"name": {
+			"type": "string"
+		},
+		"mode": {
+			"type": "string"
+		},
+		"data": {
+			"type": "object",
+			"default": {}
+		},
+		"id": {
+			"type": "string"
+		}
+	}
+}

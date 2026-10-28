@@ -1,11 +1,11 @@
 <?php
-/** Disegno del blocco "starter-theme/elenco-servizi" (React): lo stesso HTML che stampava il blocco ACF. */
+/** Disegno del blocco "starter-theme/elenco-servizi" (React): lo stesso HTML che stampava il blocco. */
 
 if ( ! defined( 'ABSPATH' ) ) {
 	exit;
 }
 
-// $starter_items e $is_preview arrivano da starter_poc_render_servizi() (starter-blocks-poc.php).
+// $starter_items e $is_preview arrivano da starter_poc_render_servizi() (starter-blocks.php).
 
 if ( ! is_array( $starter_items ) || ! $starter_items ) {
 	if ( ! empty( $is_preview ) ) {

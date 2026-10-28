@@ -1,0 +1,138 @@
+[
+    {
+        "key": "field_sthe_immagini",
+        "name": "immagini",
+        "label": "Foto dello slider",
+        "type": "gallery",
+        "return_format": "id",
+        "min": 1,
+        "max": 6
+    },
+    {
+        "key": "field_sthe_occhiello",
+        "name": "occhiello",
+        "label": "Occhiello",
+        "type": "text"
+    },
+    {
+        "key": "field_tag_762dbe53a0e5",
+        "name": "occhiello_tag",
+        "label": "Tag HTML dell'occhiello",
+        "type": "select",
+        "choices": {
+            "auto": "Automatico (consigliato)",
+            "h1": "H1",
+            "h2": "H2",
+            "h3": "H3",
+            "h4": "H4",
+            "h5": "H5",
+            "h6": "H6",
+            "span": "span",
+            "p": "p"
+        },
+        "default_value": "auto",
+        "return_format": "value",
+        "multiple": 0
+    },
+    {
+        "key": "field_sthe_titolo",
+        "name": "titolo",
+        "label": "Titolo (H1)",
+        "type": "textarea",
+        "rows": 2
+    },
+    {
+        "key": "field_tag_421caf5e3743",
+        "name": "titolo_tag",
+        "label": "Tag HTML del titolo",
+        "type": "select",
+        "choices": {
+            "auto": "Automatico (consigliato)",
+            "h1": "H1",
+            "h2": "H2",
+            "h3": "H3",
+            "h4": "H4",
+            "h5": "H5",
+            "h6": "H6",
+            "span": "span",
+            "p": "p"
+        },
+        "default_value": "auto",
+        "return_format": "value",
+        "multiple": 0
+    },
+    {
+        "key": "field_sthe_testo",
+        "name": "testo",
+        "label": "Testo",
+        "type": "textarea",
+        "rows": 3
+    },
+    {
+        "key": "field_sthe_link",
+        "name": "link",
+        "label": "Pulsante",
+        "type": "link",
+        "return_format": "array"
+    },
+    {
+        "key": "field_btn_ba210cd7b1d1",
+        "name": "link_stile",
+        "label": "Stile del pulsante",
+        "type": "select",
+        "choices": {
+            "": "Predefinito del blocco",
+            "pieno-1": "Pieno 1",
+            "contorno-1": "Contorno 1",
+            "pieno-2": "Pieno 2",
+            "contorno-2": "Contorno 2",
+            "chiaro": "Chiaro (sopra le foto)"
+        },
+        "return_format": "value",
+        "multiple": 0
+    },
+    {
+        "key": "field_sthe_link2",
+        "name": "link_2",
+        "label": "Secondo pulsante",
+        "type": "link",
+        "return_format": "array"
+    },
+    {
+        "key": "field_btn_576b428acbc8",
+        "name": "link_2_stile",
+        "label": "Stile del pulsante",
+        "type": "select",
+        "choices": {
+            "": "Predefinito del blocco",
+            "pieno-1": "Pieno 1",
+            "contorno-1": "Contorno 1",
+            "pieno-2": "Pieno 2",
+            "contorno-2": "Contorno 2",
+            "chiaro": "Chiaro (sopra le foto)"
+        },
+        "return_format": "value",
+        "multiple": 0
+    },
+    {
+        "key": "field_sthe_durata",
+        "name": "durata",
+        "label": "Secondi per foto",
+        "type": "number",
+        "default_value": 6,
+        "min": 3,
+        "max": 15
+    },
+    {
+        "key": "field_group_starter_hero_slider_adv_tab",
+        "label": "Avanzate",
+        "type": "tab"
+    },
+    {
+        "key": "field_group_starter_hero_slider_adv_classes",
+        "name": "classi_custom",
+        "label": "Classi CSS personalizzate",
+        "type": "text",
+        "placeholder": "mt2 pb4 pb2-sma"
+    }
+]

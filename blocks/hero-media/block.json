@@ -1,0 +1,42 @@
+{
+	"apiVersion": 3,
+	"name": "starter-theme/hero-media",
+	"title": "Hero con foto e video",
+	"description": "Apertura della pagina: occhiello (H1 piccolo), titolo (H2 grande), testo, due pulsanti, foto dei clienti e a destra una foto e un video verticale con due etichette.",
+	"category": "starter",
+	"icon": "video-alt3",
+	"keywords": [
+		"hero",
+		"video",
+		"foto",
+		"chi siamo"
+	],
+	"supports": {
+		"align": [
+			"full"
+		],
+		"anchor": true,
+		"customClassName": true,
+		"html": false
+	},
+	"textdomain": "slug-theme",
+	"attributes": {
+		"align": {
+			"type": "string",
+			"default": "full"
+		},
+		"name": {
+			"type": "string"
+		},
+		"mode": {
+			"type": "string"
+		},
+		"data": {
+			"type": "object",
+			"default": {}
+		},
+		"id": {
+			"type": "string"
+		}
+	}
+}

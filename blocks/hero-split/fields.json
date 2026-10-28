@@ -1,0 +1,137 @@
+[
+    {
+        "key": "field_sths_occhiello",
+        "name": "occhiello",
+        "label": "Occhiello",
+        "type": "text"
+    },
+    {
+        "key": "field_tag_c5572a0ca3af",
+        "name": "occhiello_tag",
+        "label": "Tag HTML dell'occhiello",
+        "type": "select",
+        "choices": {
+            "auto": "Automatico (consigliato)",
+            "h1": "H1",
+            "h2": "H2",
+            "h3": "H3",
+            "h4": "H4",
+            "h5": "H5",
+            "h6": "H6",
+            "span": "span",
+            "p": "p"
+        },
+        "default_value": "auto",
+        "return_format": "value",
+        "multiple": 0
+    },
+    {
+        "key": "field_sths_titolo",
+        "name": "titolo",
+        "label": "Titolo (H1)",
+        "type": "text"
+    },
+    {
+        "key": "field_tag_5a01b5a3278f",
+        "name": "titolo_tag",
+        "label": "Tag HTML del titolo",
+        "type": "select",
+        "choices": {
+            "auto": "Automatico (consigliato)",
+            "h1": "H1",
+            "h2": "H2",
+            "h3": "H3",
+            "h4": "H4",
+            "h5": "H5",
+            "h6": "H6",
+            "span": "span",
+            "p": "p"
+        },
+        "default_value": "auto",
+        "return_format": "value",
+        "multiple": 0
+    },
+    {
+        "key": "field_sths_testo",
+        "name": "testo",
+        "label": "Testo",
+        "type": "textarea",
+        "rows": 3
+    },
+    {
+        "key": "field_sths_cta1",
+        "name": "cta_primaria",
+        "label": "Pulsante principale",
+        "type": "link",
+        "return_format": "array"
+    },
+    {
+        "key": "field_btn_6a5458aa610e",
+        "name": "cta_primaria_stile",
+        "label": "Stile del pulsante",
+        "type": "select",
+        "choices": {
+            "": "Predefinito del blocco",
+            "pieno-1": "Pieno 1",
+            "contorno-1": "Contorno 1",
+            "pieno-2": "Pieno 2",
+            "contorno-2": "Contorno 2"
+        },
+        "return_format": "value",
+        "multiple": 0
+    },
+    {
+        "key": "field_sths_cta2",
+        "name": "cta_secondaria",
+        "label": "Pulsante secondario",
+        "type": "link",
+        "return_format": "array"
+    },
+    {
+        "key": "field_btn_60d63d672cb9",
+        "name": "cta_secondaria_stile",
+        "label": "Stile del pulsante",
+        "type": "select",
+        "choices": {
+            "": "Predefinito del blocco",
+            "pieno-1": "Pieno 1",
+            "contorno-1": "Contorno 1",
+            "pieno-2": "Pieno 2",
+            "contorno-2": "Contorno 2"
+        },
+        "return_format": "value",
+        "multiple": 0
+    },
+    {
+        "key": "field_sths_foto",
+        "name": "foto",
+        "label": "Foto",
+        "type": "image",
+        "return_format": "id"
+    },
+    {
+        "key": "field_sths_lato",
+        "name": "lato_foto",
+        "label": "Lato della foto",
+        "type": "button_group",
+        "choices": {
+            "sinistra": "Sinistra",
+            "destra": "Destra"
+        },
+        "default_value": "destra",
+        "return_format": "value",
+        "layout": "horizontal"
+    },
+    {
+        "key": "field_group_starter_hero_split_adv_tab",
+        "label": "Avanzate",
+        "type": "tab"
+    },
+    {
+        "key": "field_group_starter_hero_split_adv_classes",
+        "name": "classi_custom",
+        "label": "Classi CSS personalizzate",
+        "type": "text",
+        "placeholder": "mt2 pb4 pb2-sma"
+    }
+]

@@ -1,0 +1,41 @@
+{
+	"apiVersion": 3,
+	"name": "starter-theme/prodotti-in-evidenza",
+	"title": "Prodotti in evidenza",
+	"description": "Griglia di prodotti WooCommerce con la card del negozio.",
+	"category": "starter",
+	"icon": "cart",
+	"keywords": [
+		"prodotti",
+		"shop",
+		"woocommerce"
+	],
+	"supports": {
+		"align": [
+			"full"
+		],
+		"anchor": true,
+		"customClassName": true,
+		"html": false
+	},
+	"textdomain": "slug-theme",
+	"attributes": {
+		"align": {
+			"type": "string",
+			"default": "full"
+		},
+		"name": {
+			"type": "string"
+		},
+		"mode": {
+			"type": "string"
+		},
+		"data": {
+			"type": "object",
+			"default": {}
+		},
+		"id": {
+			"type": "string"
+		}
+	}
+}

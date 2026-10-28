@@ -1,0 +1,240 @@
+[
+    {
+        "key": "field_sv_layout",
+        "name": "layout",
+        "label": "Layout",
+        "type": "select",
+        "choices": {
+            "numerato": "Elenco numerato",
+            "card": "Card classiche con testo",
+            "icone": "Card strette con icona",
+            "passi": "Card numerate"
+        },
+        "default_value": "numerato",
+        "return_format": "value",
+        "multiple": 0
+    },
+    {
+        "key": "field_sv_sfondo",
+        "name": "sfondo",
+        "label": "Sfondo (solo per le card)",
+        "type": "select",
+        "choices": {
+            "accent": "Colore d'accento",
+            "muted": "Riquadro chiaro"
+        },
+        "default_value": "accent",
+        "return_format": "value",
+        "multiple": 0,
+        "conditional_logic": [
+            [
+                {
+                    "field": "field_sv_layout",
+                    "operator": "!=",
+                    "value": "numerato"
+                }
+            ]
+        ]
+    },
+    {
+        "key": "field_sv_livello",
+        "name": "livello",
+        "label": "Livello titolo",
+        "type": "select",
+        "choices": {
+            "h2": "H2",
+            "h1": "H1"
+        },
+        "default_value": "h2",
+        "return_format": "value",
+        "multiple": 0
+    },
+    {
+        "key": "field_sv_occhiello",
+        "name": "occhiello",
+        "label": "Occhiello",
+        "type": "text"
+    },
+    {
+        "key": "field_tag_96f107528100",
+        "name": "occhiello_tag",
+        "label": "Tag HTML dell'occhiello",
+        "type": "select",
+        "choices": {
+            "auto": "Automatico (consigliato)",
+            "h1": "H1",
+            "h2": "H2",
+            "h3": "H3",
+            "h4": "H4",
+            "h5": "H5",
+            "h6": "H6",
+            "span": "span",
+            "p": "p"
+        },
+        "default_value": "auto",
+        "return_format": "value",
+        "multiple": 0
+    },
+    {
+        "key": "field_sv_titolo",
+        "name": "titolo",
+        "label": "Titolo",
+        "type": "text"
+    },
+    {
+        "key": "field_tag_27e8e1790791",
+        "name": "titolo_tag",
+        "label": "Tag HTML del titolo",
+        "type": "select",
+        "choices": {
+            "auto": "Automatico (consigliato)",
+            "h1": "H1",
+            "h2": "H2",
+            "h3": "H3",
+            "h4": "H4",
+            "h5": "H5",
+            "h6": "H6",
+            "span": "span",
+            "p": "p"
+        },
+        "default_value": "auto",
+        "return_format": "value",
+        "multiple": 0
+    },
+    {
+        "key": "field_sv_testo",
+        "name": "testo",
+        "label": "Testo introduttivo (solo per l'elenco numerato)",
+        "type": "textarea",
+        "conditional_logic": [
+            [
+                {
+                    "field": "field_sv_layout",
+                    "operator": "==",
+                    "value": "numerato"
+                }
+            ]
+        ]
+    },
+    {
+        "key": "field_sv_link",
+        "name": "link",
+        "label": "Link (facoltativo)",
+        "type": "link",
+        "return_format": "array"
+    },
+    {
+        "key": "field_btn_4654570165b8",
+        "name": "link_stile",
+        "label": "Stile del pulsante",
+        "type": "select",
+        "choices": {
+            "": "Predefinito del blocco",
+            "pieno-1": "Pieno 1",
+            "contorno-1": "Contorno 1",
+            "pieno-2": "Pieno 2",
+            "contorno-2": "Contorno 2"
+        },
+        "return_format": "value",
+        "multiple": 0
+    },
+    {
+        "key": "field_sv_voci",
+        "name": "voci",
+        "label": "Voci",
+        "type": "repeater",
+        "min": 0,
+        "max": 0,
+        "button_label": "Aggiungi voce",
+        "layout": "block",
+        "sub_fields": [
+            {
+                "key": "field_sv_voci_titolo",
+                "name": "titolo",
+                "label": "Titolo",
+                "type": "text"
+            },
+            {
+                "key": "field_sv_voci_testo",
+                "name": "testo",
+                "label": "Testo",
+                "type": "textarea"
+            },
+            {
+                "key": "field_sv_voci_icona",
+                "name": "icona",
+                "label": "Icona (solo per le card strette con icona)",
+                "type": "starter_icon",
+                "default_value": "key"
+            },
+            {
+                "key": "field_sv_voci_link",
+                "name": "link",
+                "label": "Link (solo per le card)",
+                "type": "link",
+                "return_format": "array"
+            }
+        ]
+    },
+    {
+        "key": "field_sv_cta_testo",
+        "name": "cta_testo",
+        "label": "CTA finale — testo (solo per le card classiche)",
+        "type": "text",
+        "conditional_logic": [
+            [
+                {
+                    "field": "field_sv_layout",
+                    "operator": "==",
+                    "value": "card"
+                }
+            ]
+        ]
+    },
+    {
+        "key": "field_sv_cta_link",
+        "name": "cta_link",
+        "label": "CTA finale — link",
+        "type": "link",
+        "return_format": "array",
+        "conditional_logic": [
+            [
+                {
+                    "field": "field_sv_layout",
+                    "operator": "==",
+                    "value": "card"
+                }
+            ]
+        ]
+    },
+    {
+        "key": "field_group_starter_sezione_voci_adv_tab",
+        "label": "Avanzate",
+        "type": "tab"
+    },
+    {
+        "key": "field_group_starter_sezione_voci_adv_bg",
+        "name": "sfondo_sezione",
+        "label": "Sfondo della sezione",
+        "type": "select",
+        "choices": {
+            "": "Nessuno",
+            "chiaro": "Chiaro (grigio leggero)",
+            "slot_1": "Background",
+            "slot_2": "Testo",
+            "slot_3": "Primario",
+            "slot_4": "Secondario",
+            "slot_5": "Accento",
+            "slot_6": "Secondario Accenteo"
+        },
+        "return_format": "value",
+        "multiple": 0
+    },
+    {
+        "key": "field_group_starter_sezione_voci_adv_classes",
+        "name": "classi_custom",
+        "label": "Classi CSS personalizzate",
+        "type": "text",
+        "placeholder": "mt2 pb4 pb2-sma"
+    }
+]

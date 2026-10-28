@@ -1,0 +1,805 @@
+{
+    "object": "post_type",
+    "name": "immobile",
+    "title": "Scheda immobile",
+    "fields": [
+        {
+            "key": "field_imm_tab_dati_principali",
+            "label": "Dati principali",
+            "type": "tab"
+        },
+        {
+            "key": "field_imm_titolo_pagina",
+            "name": "titolo_pagina",
+            "label": "Titolo pagina",
+            "type": "textarea",
+            "rows": 3
+        },
+        {
+            "key": "field_imm_apertura",
+            "name": "apertura",
+            "label": "Apertura (paragrafo editoriale)",
+            "type": "textarea",
+            "rows": 3
+        },
+        {
+            "key": "field_imm_prezzo",
+            "name": "prezzo",
+            "label": "Prezzo",
+            "type": "number",
+            "min": 0,
+            "step": 1
+        },
+        {
+            "key": "field_imm_superficie",
+            "name": "superficie",
+            "label": "Superficie",
+            "type": "number",
+            "min": 0,
+            "step": 1
+        },
+        {
+            "key": "field_imm_locali",
+            "name": "locali",
+            "label": "Locali",
+            "type": "number",
+            "min": 0,
+            "step": 1
+        },
+        {
+            "key": "field_imm_locali_plus",
+            "name": "locali_plus",
+            "label": "Mostra “+” dopo i locali",
+            "type": "true_false",
+            "default_value": 0
+        },
+        {
+            "key": "field_imm_camere",
+            "name": "camere",
+            "label": "Camere da letto",
+            "type": "number",
+            "min": 0,
+            "step": 1
+        },
+        {
+            "key": "field_imm_bagni",
+            "name": "bagni",
+            "label": "Bagni",
+            "type": "number",
+            "min": 0,
+            "step": 1
+        },
+        {
+            "key": "field_imm_nota_locali",
+            "name": "nota_locali",
+            "label": "Nota sotto ai locali",
+            "type": "text"
+        },
+        {
+            "key": "field_imm_nota_bagni",
+            "name": "nota_bagni",
+            "label": "Nota sotto ai bagni",
+            "type": "text"
+        },
+        {
+            "key": "field_imm_piano",
+            "name": "piano",
+            "label": "Piano",
+            "type": "text"
+        },
+        {
+            "key": "field_imm_nota_piano",
+            "name": "nota_piano",
+            "label": "Nota sotto al piano",
+            "type": "text"
+        },
+        {
+            "key": "field_imm_classe_energetica",
+            "name": "classe_energetica",
+            "label": "Classe energetica",
+            "type": "select",
+            "choices": {
+                "A4": "A4",
+                "A3": "A3",
+                "A2": "A2",
+                "A1": "A1",
+                "B": "B",
+                "C": "C",
+                "D": "D",
+                "E": "E",
+                "F": "F",
+                "G": "G"
+            },
+            "return_format": "value",
+            "multiple": 0,
+            "allow_null": 1
+        },
+        {
+            "key": "field_imm_epi",
+            "name": "epi",
+            "label": "Prestazione energetica",
+            "type": "text"
+        },
+        {
+            "key": "field_imm_etichette",
+            "name": "etichette",
+            "label": "Etichette in evidenza",
+            "type": "repeater",
+            "min": 0,
+            "max": 0,
+            "button_label": "Aggiungi etichetta in evidenza",
+            "layout": "block",
+            "sub_fields": [
+                {
+                    "key": "field_imm_etichette_elenco",
+                    "name": "etichette_elenco",
+                    "label": "Da elenco",
+                    "type": "true_false",
+                    "default_value": 1
+                },
+                {
+                    "key": "field_imm_etichette_scelta",
+                    "name": "etichette_scelta",
+                    "label": "Etichetta",
+                    "type": "select",
+                    "choices": {
+                        "Esclusiva": "Esclusiva",
+                        "Classe signorile": "Classe signorile",
+                        "Ristrutturato a nuovo": "Ristrutturato a nuovo",
+                        "Ristrutturato": "Ristrutturato",
+                        "Arredato": "Arredato",
+                        "Parzialmente arredato": "Parzialmente arredato",
+                        "Disponibile da subito": "Disponibile da subito",
+                        "Con balcone": "Con balcone",
+                        "Terrazza panoramica": "Terrazza panoramica",
+                        "Box incluso": "Box incluso",
+                        "Nessuna spesa condominiale": "Nessuna spesa condominiale"
+                    },
+                    "return_format": "value",
+                    "multiple": 0,
+                    "allow_null": 1,
+                    "conditional_logic": [
+                        [
+                            {
+                                "field": "field_imm_etichette_elenco",
+                                "operator": "==",
+                                "value": "1"
+                            }
+                        ]
+                    ]
+                },
+                {
+                    "key": "field_imm_etichette_testo",
+                    "name": "etichette_testo",
+                    "label": "Etichetta",
+                    "type": "text",
+                    "conditional_logic": [
+                        [
+                            {
+                                "field": "field_imm_etichette_elenco",
+                                "operator": "!=",
+                                "value": "1"
+                            }
+                        ]
+                    ]
+                }
+            ]
+        },
+        {
+            "key": "field_imm_tab_dettagli",
+            "label": "Dettagli",
+            "type": "tab"
+        },
+        {
+            "key": "field_imm_altri_dati",
+            "name": "altri_dati",
+            "label": "Caratteristiche",
+            "type": "repeater",
+            "min": 0,
+            "max": 0,
+            "button_label": "Aggiungi caratteristica",
+            "layout": "block",
+            "sub_fields": [
+                {
+                    "key": "field_imm_altri_dati_elenco",
+                    "name": "altri_dati_elenco",
+                    "label": "Da elenco",
+                    "type": "true_false",
+                    "default_value": 1
+                },
+                {
+                    "key": "field_imm_altri_dati_scelta",
+                    "name": "altri_dati_scelta",
+                    "label": "Etichetta",
+                    "type": "select",
+                    "choices": {
+                        "Cucina": "Cucina",
+                        "Riscaldamento": "Riscaldamento",
+                        "Climatizzazione": "Climatizzazione",
+                        "Spese condominio": "Spese condominio",
+                        "Anno di costruzione": "Anno di costruzione",
+                        "Piani edificio": "Piani edificio",
+                        "Stato": "Stato",
+                        "Esposizione": "Esposizione",
+                        "Infissi": "Infissi",
+                        "Portineria": "Portineria",
+                        "Box auto": "Box auto",
+                        "Tipo proprietà": "Tipo proprietà",
+                        "Tipo di contratto": "Tipo di contratto",
+                        "Cauzione": "Cauzione",
+                        "Disponibilità": "Disponibilità",
+                        "Ascensore": "Ascensore",
+                        "Arredamento": "Arredamento",
+                        "Terrazzo": "Terrazzo",
+                        "Balcone": "Balcone",
+                        "Cantina": "Cantina",
+                        "Piscina": "Piscina",
+                        "Giardino": "Giardino",
+                        "Fibra ottica": "Fibra ottica",
+                        "Porta blindata": "Porta blindata"
+                    },
+                    "return_format": "value",
+                    "multiple": 0,
+                    "allow_null": 1,
+                    "conditional_logic": [
+                        [
+                            {
+                                "field": "field_imm_altri_dati_elenco",
+                                "operator": "==",
+                                "value": "1"
+                            }
+                        ]
+                    ]
+                },
+                {
+                    "key": "field_imm_altri_dati_etichetta",
+                    "name": "altri_dati_etichetta",
+                    "label": "Etichetta",
+                    "type": "text",
+                    "conditional_logic": [
+                        [
+                            {
+                                "field": "field_imm_altri_dati_elenco",
+                                "operator": "!=",
+                                "value": "1"
+                            }
+                        ]
+                    ]
+                },
+                {
+                    "key": "field_imm_altri_dati_valore_ascensore",
+                    "name": "altri_dati_valore_ascensore",
+                    "label": "Valore",
+                    "type": "select",
+                    "choices": {
+                        "Sì": "Sì",
+                        "No": "No",
+                        "Doppio ascensore": "Doppio ascensore"
+                    },
+                    "default_value": "Sì",
+                    "return_format": "value",
+                    "multiple": 0,
+                    "allow_null": 0,
+                    "conditional_logic": [
+                        [
+                            {
+                                "field": "field_imm_altri_dati_elenco",
+                                "operator": "==",
+                                "value": "1"
+                            },
+                            {
+                                "field": "field_imm_altri_dati_scelta",
+                                "operator": "==",
+                                "value": "Ascensore"
+                            }
+                        ]
+                    ]
+                },
+                {
+                    "key": "field_imm_altri_dati_valore_arredamento",
+                    "name": "altri_dati_valore_arredamento",
+                    "label": "Valore",
+                    "type": "select",
+                    "choices": {
+                        "Sì": "Sì",
+                        "No": "No",
+                        "Parziale": "Parziale"
+                    },
+                    "default_value": "Sì",
+                    "return_format": "value",
+                    "multiple": 0,
+                    "allow_null": 0,
+                    "conditional_logic": [
+                        [
+                            {
+                                "field": "field_imm_altri_dati_elenco",
+                                "operator": "==",
+                                "value": "1"
+                            },
+                            {
+                                "field": "field_imm_altri_dati_scelta",
+                                "operator": "==",
+                                "value": "Arredamento"
+                            }
+                        ]
+                    ]
+                },
+                {
+                    "key": "field_imm_altri_dati_valore_sino",
+                    "name": "altri_dati_valore_sino",
+                    "label": "Valore",
+                    "type": "select",
+                    "choices": {
+                        "Sì": "Sì",
+                        "No": "No"
+                    },
+                    "default_value": "Sì",
+                    "return_format": "value",
+                    "multiple": 0,
+                    "allow_null": 0,
+                    "conditional_logic": [
+                        [
+                            {
+                                "field": "field_imm_altri_dati_elenco",
+                                "operator": "==",
+                                "value": "1"
+                            },
+                            {
+                                "field": "field_imm_altri_dati_scelta",
+                                "operator": "==",
+                                "value": "Terrazzo"
+                            }
+                        ],
+                        [
+                            {
+                                "field": "field_imm_altri_dati_elenco",
+                                "operator": "==",
+                                "value": "1"
+                            },
+                            {
+                                "field": "field_imm_altri_dati_scelta",
+                                "operator": "==",
+                                "value": "Balcone"
+                            }
+                        ],
+                        [
+                            {
+                                "field": "field_imm_altri_dati_elenco",
+                                "operator": "==",
+                                "value": "1"
+                            },
+                            {
+                                "field": "field_imm_altri_dati_scelta",
+                                "operator": "==",
+                                "value": "Cantina"
+                            }
+                        ],
+                        [
+                            {
+                                "field": "field_imm_altri_dati_elenco",
+                                "operator": "==",
+                                "value": "1"
+                            },
+                            {
+                                "field": "field_imm_altri_dati_scelta",
+                                "operator": "==",
+                                "value": "Piscina"
+                            }
+                        ],
+                        [
+                            {
+                                "field": "field_imm_altri_dati_elenco",
+                                "operator": "==",
+                                "value": "1"
+                            },
+                            {
+                                "field": "field_imm_altri_dati_scelta",
+                                "operator": "==",
+                                "value": "Giardino"
+                            }
+                        ],
+                        [
+                            {
+                                "field": "field_imm_altri_dati_elenco",
+                                "operator": "==",
+                                "value": "1"
+                            },
+                            {
+                                "field": "field_imm_altri_dati_scelta",
+                                "operator": "==",
+                                "value": "Fibra ottica"
+                            }
+                        ],
+                        [
+                            {
+                                "field": "field_imm_altri_dati_elenco",
+                                "operator": "==",
+                                "value": "1"
+                            },
+                            {
+                                "field": "field_imm_altri_dati_scelta",
+                                "operator": "==",
+                                "value": "Porta blindata"
+                            }
+                        ]
+                    ]
+                },
+                {
+                    "key": "field_imm_altri_dati_valore_cucina",
+                    "name": "altri_dati_valore_cucina",
+                    "label": "Valore",
+                    "type": "select",
+                    "choices": {
+                        "Abitabile": "Abitabile",
+                        "A vista": "A vista",
+                        "Angolo cottura": "Angolo cottura",
+                        "Cucinotto": "Cucinotto",
+                        "Semi abitabile": "Semi abitabile",
+                        "Indipendente": "Indipendente",
+                        "Aperta": "Aperta"
+                    },
+                    "return_format": "value",
+                    "multiple": 1,
+                    "allow_null": 1,
+                    "conditional_logic": [
+                        [
+                            {
+                                "field": "field_imm_altri_dati_elenco",
+                                "operator": "==",
+                                "value": "1"
+                            },
+                            {
+                                "field": "field_imm_altri_dati_scelta",
+                                "operator": "==",
+                                "value": "Cucina"
+                            }
+                        ]
+                    ]
+                },
+                {
+                    "key": "field_imm_altri_dati_valore_riscaldamento",
+                    "name": "altri_dati_valore_riscaldamento",
+                    "label": "Valore",
+                    "type": "select",
+                    "choices": {
+                        "Centralizzato": "Centralizzato",
+                        "Autonomo": "Autonomo",
+                        "A radiatori": "A radiatori",
+                        "A pavimento": "A pavimento",
+                        "A metano": "A metano",
+                        "Teleriscaldamento": "Teleriscaldamento",
+                        "Pompa di calore": "Pompa di calore",
+                        "A gas": "A gas",
+                        "A gasolio": "A gasolio"
+                    },
+                    "return_format": "value",
+                    "multiple": 1,
+                    "allow_null": 1,
+                    "conditional_logic": [
+                        [
+                            {
+                                "field": "field_imm_altri_dati_elenco",
+                                "operator": "==",
+                                "value": "1"
+                            },
+                            {
+                                "field": "field_imm_altri_dati_scelta",
+                                "operator": "==",
+                                "value": "Riscaldamento"
+                            }
+                        ]
+                    ]
+                },
+                {
+                    "key": "field_imm_altri_dati_valore_clima",
+                    "name": "altri_dati_valore_clima",
+                    "label": "Valore",
+                    "type": "select",
+                    "choices": {
+                        "Autonoma": "Autonoma",
+                        "Centralizzata": "Centralizzata",
+                        "Freddo": "Freddo",
+                        "Caldo": "Caldo",
+                        "Predisposizione": "Predisposizione"
+                    },
+                    "return_format": "value",
+                    "multiple": 1,
+                    "allow_null": 1,
+                    "conditional_logic": [
+                        [
+                            {
+                                "field": "field_imm_altri_dati_elenco",
+                                "operator": "==",
+                                "value": "1"
+                            },
+                            {
+                                "field": "field_imm_altri_dati_scelta",
+                                "operator": "==",
+                                "value": "Climatizzazione"
+                            }
+                        ]
+                    ]
+                },
+                {
+                    "key": "field_imm_altri_dati_valore",
+                    "name": "altri_dati_valore",
+                    "label": "Valore",
+                    "type": "text",
+                    "conditional_logic": [
+                        [
+                            {
+                                "field": "field_imm_altri_dati_elenco",
+                                "operator": "!=",
+                                "value": "1"
+                            }
+                        ],
+                        [
+                            {
+                                "field": "field_imm_altri_dati_elenco",
+                                "operator": "==",
+                                "value": "1"
+                            },
+                            {
+                                "field": "field_imm_altri_dati_scelta",
+                                "operator": "!=",
+                                "value": "Cucina"
+                            },
+                            {
+                                "field": "field_imm_altri_dati_scelta",
+                                "operator": "!=",
+                                "value": "Riscaldamento"
+                            },
+                            {
+                                "field": "field_imm_altri_dati_scelta",
+                                "operator": "!=",
+                                "value": "Climatizzazione"
+                            },
+                            {
+                                "field": "field_imm_altri_dati_scelta",
+                                "operator": "!=",
+                                "value": "Ascensore"
+                            },
+                            {
+                                "field": "field_imm_altri_dati_scelta",
+                                "operator": "!=",
+                                "value": "Arredamento"
+                            },
+                            {
+                                "field": "field_imm_altri_dati_scelta",
+                                "operator": "!=",
+                                "value": "Terrazzo"
+                            },
+                            {
+                                "field": "field_imm_altri_dati_scelta",
+                                "operator": "!=",
+                                "value": "Balcone"
+                            },
+                            {
+                                "field": "field_imm_altri_dati_scelta",
+                                "operator": "!=",
+                                "value": "Cantina"
+                            },
+                            {
+                                "field": "field_imm_altri_dati_scelta",
+                                "operator": "!=",
+                                "value": "Piscina"
+                            },
+                            {
+                                "field": "field_imm_altri_dati_scelta",
+                                "operator": "!=",
+                                "value": "Giardino"
+                            },
+                            {
+                                "field": "field_imm_altri_dati_scelta",
+                                "operator": "!=",
+                                "value": "Fibra ottica"
+                            },
+                            {
+                                "field": "field_imm_altri_dati_scelta",
+                                "operator": "!=",
+                                "value": "Porta blindata"
+                            }
+                        ]
+                    ]
+                },
+                {
+                    "key": "field_imm_altri_dati_risalto",
+                    "name": "altri_dati_risalto",
+                    "label": "In risalto",
+                    "type": "true_false",
+                    "default_value": 0
+                }
+            ]
+        },
+        {
+            "key": "field_imm_tab_galleria",
+            "label": "Galleria",
+            "type": "tab"
+        },
+        {
+            "key": "field_imm_immagine_hero",
+            "name": "immagine_hero",
+            "label": "Immagine per la hero della home",
+            "type": "image",
+            "return_format": "array"
+        },
+        {
+            "key": "field_imm_galleria",
+            "name": "galleria",
+            "label": "Foto",
+            "type": "gallery",
+            "return_format": "array",
+            "min": 0,
+            "max": 0,
+            "mime_types": "jpg,jpeg,png,webp"
+        },
+        {
+            "key": "field_imm_planimetria",
+            "name": "planimetria",
+            "label": "Planimetria",
+            "type": "gallery",
+            "return_format": "array",
+            "min": 0,
+            "max": 0,
+            "mime_types": "jpg,jpeg,png,webp"
+        },
+        {
+            "key": "field_imm_tour_3d",
+            "name": "tour_3d",
+            "label": "Tour virtuale 3D",
+            "type": "text",
+            "placeholder": "https://my.matterport.com/show?m=…"
+        },
+        {
+            "key": "field_imm_video_tour",
+            "name": "video_tour",
+            "label": "Video",
+            "type": "url"
+        },
+        {
+            "key": "field_imm_tab_descrizione",
+            "label": "Descrizione",
+            "type": "tab"
+        },
+        {
+            "key": "field_imm_titolo_descrizione",
+            "name": "titolo_descrizione",
+            "label": "Titolo descrizione",
+            "type": "text"
+        },
+        {
+            "key": "field_imm_descrizione",
+            "name": "descrizione",
+            "label": "Descrizione",
+            "type": "wysiwyg",
+            "media_upload": 0
+        },
+        {
+            "key": "field_imm_punti_di_forza",
+            "name": "punti_di_forza",
+            "label": "Punti di forza",
+            "type": "repeater",
+            "min": 0,
+            "max": 0,
+            "button_label": "Aggiungi punto di forza",
+            "layout": "block",
+            "sub_fields": [
+                {
+                    "key": "field_imm_punti_di_forza_titolo",
+                    "name": "punti_di_forza_titolo",
+                    "label": "Titolo",
+                    "type": "text"
+                },
+                {
+                    "key": "field_imm_punti_di_forza_testo",
+                    "name": "punti_di_forza_testo",
+                    "label": "Testo",
+                    "type": "textarea",
+                    "rows": 2
+                }
+            ]
+        },
+        {
+            "key": "field_imm_blocchi_piano",
+            "name": "blocchi_piano",
+            "label": "Blocchi per piano o zona",
+            "type": "repeater",
+            "min": 0,
+            "max": 0,
+            "button_label": "Aggiungi blocco",
+            "layout": "block",
+            "sub_fields": [
+                {
+                    "key": "field_imm_blocchi_piano_occhiello",
+                    "name": "blocchi_piano_occhiello",
+                    "label": "Occhiello",
+                    "type": "text"
+                },
+                {
+                    "key": "field_imm_blocchi_piano_titolo",
+                    "name": "blocchi_piano_titolo",
+                    "label": "Titolo",
+                    "type": "text"
+                },
+                {
+                    "key": "field_imm_blocchi_piano_testo",
+                    "name": "blocchi_piano_testo",
+                    "label": "Testo",
+                    "type": "textarea",
+                    "rows": 3
+                }
+            ]
+        },
+        {
+            "key": "field_imm_tab_posizione",
+            "label": "Posizione",
+            "type": "tab"
+        },
+        {
+            "key": "field_imm_indirizzo",
+            "name": "indirizzo",
+            "label": "Indirizzo",
+            "type": "text"
+        },
+        {
+            "key": "field_imm_titolo_zona",
+            "name": "titolo_zona",
+            "label": "Titolo “La zona”",
+            "type": "text"
+        },
+        {
+            "key": "field_imm_testo_zona",
+            "name": "testo_zona",
+            "label": "Testo “La zona”",
+            "type": "textarea",
+            "rows": 4
+        },
+        {
+            "key": "field_imm_punti_interesse",
+            "name": "punti_interesse",
+            "label": "Nelle vicinanze",
+            "type": "repeater",
+            "min": 0,
+            "max": 0,
+            "button_label": "Aggiungi punto d'interesse",
+            "layout": "block",
+            "sub_fields": [
+                {
+                    "key": "field_imm_punti_interesse_tipo",
+                    "name": "punti_interesse_tipo",
+                    "label": "Tipo",
+                    "type": "select",
+                    "choices": {
+                        "metro": "Metropolitana",
+                        "treno": "Stazione ferroviaria",
+                        "bus": "Bus e tram",
+                        "parco": "Parco",
+                        "scuola": "Scuola",
+                        "shopping": "Shopping",
+                        "supermercato": "Supermercati",
+                        "ristoranti": "Ristoranti",
+                        "ospedale": "Ospedale",
+                        "farmacia": "Farmacia",
+                        "salute": "Salute e servizi"
+                    },
+                    "default_value": "metro",
+                    "return_format": "value",
+                    "multiple": 0,
+                    "allow_null": 0
+                },
+                {
+                    "key": "field_imm_punti_interesse_nome",
+                    "name": "punti_interesse_nome",
+                    "label": "Nome",
+                    "type": "text"
+                },
+                {
+                    "key": "field_imm_punti_interesse_distanza",
+                    "name": "punti_interesse_distanza",
+                    "label": "Distanza",
+                    "type": "text"
+                }
+            ]
+        }
+    ]
+}

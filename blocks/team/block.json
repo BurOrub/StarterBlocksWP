@@ -1,0 +1,41 @@
+{
+	"apiVersion": 3,
+	"name": "starter-theme/team",
+	"title": "Team",
+	"description": "Griglia delle persone del team: foto quadrata, nome, ruolo e breve bio.",
+	"category": "starter",
+	"icon": "groups",
+	"keywords": [
+		"team",
+		"persone",
+		"staff"
+	],
+	"supports": {
+		"align": [
+			"full"
+		],
+		"anchor": true,
+		"customClassName": true,
+		"html": false
+	},
+	"textdomain": "slug-theme",
+	"attributes": {
+		"align": {
+			"type": "string",
+			"default": "full"
+		},
+		"name": {
+			"type": "string"
+		},
+		"mode": {
+			"type": "string"
+		},
+		"data": {
+			"type": "object",
+			"default": {}
+		},
+		"id": {
+			"type": "string"
+		}
+	}
+}

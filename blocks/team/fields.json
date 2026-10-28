@@ -1,0 +1,129 @@
+[
+    {
+        "key": "field_stte_occhiello",
+        "name": "occhiello",
+        "label": "Occhiello (titolo SEO, H2)",
+        "type": "text"
+    },
+    {
+        "key": "field_tag_c19dc98bbc16",
+        "name": "occhiello_tag",
+        "label": "Tag HTML dell'occhiello",
+        "type": "select",
+        "choices": {
+            "auto": "Automatico (consigliato)",
+            "h1": "H1",
+            "h2": "H2",
+            "h3": "H3",
+            "h4": "H4",
+            "h5": "H5",
+            "h6": "H6",
+            "span": "span",
+            "p": "p"
+        },
+        "default_value": "auto",
+        "return_format": "value",
+        "multiple": 0
+    },
+    {
+        "key": "field_stte_titolo",
+        "name": "titolo",
+        "label": "Titolo grande (H3)",
+        "type": "text"
+    },
+    {
+        "key": "field_tag_33c474bedfdf",
+        "name": "titolo_tag",
+        "label": "Tag HTML del titolo",
+        "type": "select",
+        "choices": {
+            "auto": "Automatico (consigliato)",
+            "h1": "H1",
+            "h2": "H2",
+            "h3": "H3",
+            "h4": "H4",
+            "h5": "H5",
+            "h6": "H6",
+            "span": "span",
+            "p": "p"
+        },
+        "default_value": "auto",
+        "return_format": "value",
+        "multiple": 0
+    },
+    {
+        "key": "field_stte_testo",
+        "name": "testo",
+        "label": "Testo introduttivo",
+        "type": "textarea",
+        "rows": 3
+    },
+    {
+        "key": "field_stte_voci",
+        "name": "voci",
+        "label": "Persone",
+        "type": "repeater",
+        "min": 0,
+        "max": 0,
+        "button_label": "Aggiungi persona",
+        "layout": "block",
+        "sub_fields": [
+            {
+                "key": "field_stte_foto",
+                "name": "voci_foto",
+                "label": "Foto",
+                "type": "image",
+                "return_format": "id"
+            },
+            {
+                "key": "field_stte_nome",
+                "name": "voci_nome",
+                "label": "Nome e cognome",
+                "type": "text"
+            },
+            {
+                "key": "field_stte_ruolo",
+                "name": "voci_ruolo",
+                "label": "Ruolo",
+                "type": "text"
+            },
+            {
+                "key": "field_stte_bio",
+                "name": "voci_bio",
+                "label": "Breve bio",
+                "type": "textarea",
+                "rows": 3
+            }
+        ]
+    },
+    {
+        "key": "field_group_starter_team_adv_tab",
+        "label": "Avanzate",
+        "type": "tab"
+    },
+    {
+        "key": "field_group_starter_team_adv_bg",
+        "name": "sfondo_sezione",
+        "label": "Sfondo della sezione",
+        "type": "select",
+        "choices": {
+            "": "Nessuno",
+            "chiaro": "Chiaro (grigio leggero)",
+            "slot_1": "Background",
+            "slot_2": "Testo",
+            "slot_3": "Primario",
+            "slot_4": "Secondario",
+            "slot_5": "Accento",
+            "slot_6": "Secondario Accenteo"
+        },
+        "return_format": "value",
+        "multiple": 0
+    },
+    {
+        "key": "field_group_starter_team_adv_classes",
+        "name": "classi_custom",
+        "label": "Classi CSS personalizzate",
+        "type": "text",
+        "placeholder": "mt2 pb4 pb2-sma"
+    }
+]

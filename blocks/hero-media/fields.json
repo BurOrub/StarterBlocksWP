@@ -1,0 +1,198 @@
+[
+    {
+        "key": "field_sthm_occhiello",
+        "name": "occhiello",
+        "label": "Occhiello (H1 piccolo)",
+        "type": "text"
+    },
+    {
+        "key": "field_tag_0367ee78854f",
+        "name": "occhiello_tag",
+        "label": "Tag HTML dell'occhiello",
+        "type": "select",
+        "choices": {
+            "auto": "Automatico (consigliato)",
+            "h1": "H1",
+            "h2": "H2",
+            "h3": "H3",
+            "h4": "H4",
+            "h5": "H5",
+            "h6": "H6",
+            "span": "span",
+            "p": "p"
+        },
+        "default_value": "auto",
+        "return_format": "value",
+        "multiple": 0
+    },
+    {
+        "key": "field_sthm_titolo",
+        "name": "titolo",
+        "label": "Titolo (H2 grande)",
+        "type": "text"
+    },
+    {
+        "key": "field_tag_ef762d79a53c",
+        "name": "titolo_tag",
+        "label": "Tag HTML del titolo",
+        "type": "select",
+        "choices": {
+            "auto": "Automatico (consigliato)",
+            "h1": "H1",
+            "h2": "H2",
+            "h3": "H3",
+            "h4": "H4",
+            "h5": "H5",
+            "h6": "H6",
+            "span": "span",
+            "p": "p"
+        },
+        "default_value": "auto",
+        "return_format": "value",
+        "multiple": 0
+    },
+    {
+        "key": "field_sthm_testo",
+        "name": "testo",
+        "label": "Testo",
+        "type": "textarea",
+        "rows": 3
+    },
+    {
+        "key": "field_sthm_cta1",
+        "name": "cta_primaria",
+        "label": "Pulsante principale",
+        "type": "link",
+        "return_format": "array"
+    },
+    {
+        "key": "field_btn_6f2d32f1239e",
+        "name": "cta_primaria_stile",
+        "label": "Stile del pulsante",
+        "type": "select",
+        "choices": {
+            "": "Predefinito del blocco",
+            "pieno-1": "Pieno 1",
+            "contorno-1": "Contorno 1",
+            "pieno-2": "Pieno 2",
+            "contorno-2": "Contorno 2"
+        },
+        "return_format": "value",
+        "multiple": 0
+    },
+    {
+        "key": "field_sthm_cta2",
+        "name": "cta_secondaria",
+        "label": "Pulsante secondario",
+        "type": "link",
+        "return_format": "array"
+    },
+    {
+        "key": "field_btn_89d42dfad089",
+        "name": "cta_secondaria_stile",
+        "label": "Stile del pulsante",
+        "type": "select",
+        "choices": {
+            "": "Predefinito del blocco",
+            "pieno-1": "Pieno 1",
+            "contorno-1": "Contorno 1",
+            "pieno-2": "Pieno 2",
+            "contorno-2": "Contorno 2"
+        },
+        "return_format": "value",
+        "multiple": 0
+    },
+    {
+        "key": "field_sthm_clienti",
+        "name": "clienti",
+        "label": "Foto dei clienti (max 6)",
+        "type": "gallery",
+        "return_format": "id",
+        "min": 0,
+        "max": 6
+    },
+    {
+        "key": "field_sthm_clienti_testo",
+        "name": "clienti_testo",
+        "label": "Frase accanto alle foto",
+        "type": "text"
+    },
+    {
+        "key": "field_sthm_foto",
+        "name": "foto",
+        "label": "Foto (a destra)",
+        "type": "image",
+        "return_format": "id"
+    },
+    {
+        "key": "field_sthm_etichetta_foto",
+        "name": "etichetta_foto",
+        "label": "Etichetta sotto la foto",
+        "type": "text"
+    },
+    {
+        "key": "field_sthm_colore_foto",
+        "name": "colore_etichetta_foto",
+        "label": "Colore dell'etichetta della foto",
+        "type": "select",
+        "choices": {
+            "cta": "Accento pulsanti (CTA)",
+            "social": "Accento social",
+            "menu": "Accento menu",
+            "principale": "Colore principale",
+            "chiaro": "Chiaro"
+        },
+        "default_value": "cta",
+        "return_format": "value",
+        "multiple": 0
+    },
+    {
+        "key": "field_sthm_video",
+        "name": "video",
+        "label": "Video verticale",
+        "type": "file",
+        "return_format": "array",
+        "mime_types": "mp4,webm"
+    },
+    {
+        "key": "field_sthm_copertina",
+        "name": "copertina_video",
+        "label": "Copertina del video",
+        "type": "image",
+        "return_format": "id"
+    },
+    {
+        "key": "field_sthm_etichetta_video",
+        "name": "etichetta_video",
+        "label": "Etichetta sotto il video",
+        "type": "text"
+    },
+    {
+        "key": "field_sthm_colore_video",
+        "name": "colore_etichetta_video",
+        "label": "Colore dell'etichetta del video",
+        "type": "select",
+        "choices": {
+            "cta": "Accento pulsanti (CTA)",
+            "social": "Accento social",
+            "menu": "Accento menu",
+            "principale": "Colore principale",
+            "chiaro": "Chiaro"
+        },
+        "default_value": "social",
+        "return_format": "value",
+        "multiple": 0
+    },
+    {
+        "key": "field_group_starter_hero_media_adv_tab",
+        "label": "Avanzate",
+        "type": "tab"
+    },
+    {
+        "key": "field_group_starter_hero_media_adv_classes",
+        "name": "classi_custom",
+        "label": "Classi CSS personalizzate",
+        "type": "text",
+        "placeholder": "mt2 pb4 pb2-sma"
+    }
+]

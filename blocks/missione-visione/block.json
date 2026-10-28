@@ -1,0 +1,40 @@
+{
+	"apiVersion": 3,
+	"name": "starter-theme/missione-visione",
+	"title": "Due riquadri",
+	"description": "Due (o più) riquadri affiancati su sfondo chiaro; il secondo evidenziato con il colore d'accento.",
+	"category": "starter",
+	"icon": "columns",
+	"keywords": [
+		"missione",
+		"visione",
+		"riquadri"
+	],
+	"supports": {
+		"align": [
+			"full"
+		],
+		"anchor": true,
+		"customClassName": true
+	},
+	"textdomain": "slug-theme",
+	"attributes": {
+		"align": {
+			"type": "string",
+			"default": "full"
+		},
+		"name": {
+			"type": "string"
+		},
+		"mode": {
+			"type": "string"
+		},
+		"data": {
+			"type": "object",
+			"default": {}
+		},
+		"id": {
+			"type": "string"
+		}
+	}
+}

@@ -1,0 +1,72 @@
+{
+	"apiVersion": 3,
+	"name": "starter-theme/sezione-affiancata",
+	"title": "Sezione affiancata",
+	"description": "Foto (1 o 2) accanto a un testo scritto con i blocchi di Gutenberg (titolo, paragrafi, pulsanti).",
+	"category": "starter",
+	"icon": "align-pull-left",
+	"keywords": [
+		"testo",
+		"foto",
+		"affiancata",
+		"split"
+	],
+	"supports": {
+		"align": [
+			"full"
+		],
+		"anchor": true,
+		"customClassName": true,
+		"html": false,
+		"jsx": true
+	},
+	"textdomain": "slug-theme",
+	"attributes": {
+		"align": {
+			"type": "string",
+			"default": "full"
+		},
+		"name": {
+			"type": "string"
+		},
+		"mode": {
+			"type": "string"
+		},
+		"data": {
+			"type": "object",
+			"default": {}
+		},
+		"id": {
+			"type": "string"
+		}
+	},
+	"starterInner": {
+		"template": [
+			[
+				"core/heading",
+				{
+					"level": 2,
+					"placeholder": "Titolo della sezione"
+				}
+			],
+			[
+				"core/paragraph",
+				{
+					"placeholder": "Testo…"
+				}
+			],
+			[
+				"core/buttons",
+				{},
+				[
+					[
+						"core/button",
+						{
+							"className": "is-style-outline"
+						}
+					]
+				]
+			]
+		]
+	}
+}

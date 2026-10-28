@@ -1,0 +1,98 @@
+{
+    "object": "post_type",
+    "name": "portfolio",
+    "title": "Progetto",
+    "fields": [
+        {
+            "key": "field_stpd_tab_dettagli",
+            "label": "Dettagli del progetto",
+            "type": "tab"
+        },
+        {
+            "key": "field_stpd_logo",
+            "name": "progetto_logo",
+            "label": "Logo del cliente",
+            "type": "image",
+            "return_format": "array"
+        },
+        {
+            "key": "field_stpd_cover_full",
+            "name": "progetto_copertina_full",
+            "label": "Copertina a tutto schermo",
+            "type": "true_false",
+            "default_value": 0
+        },
+        {
+            "key": "field_stpd_sito",
+            "name": "progetto_link",
+            "label": "Link al progetto online",
+            "type": "link",
+            "return_format": "array"
+        },
+        {
+            "key": "field_stpd_video",
+            "name": "progetto_video",
+            "label": "Video di copertina",
+            "type": "file",
+            "return_format": "array",
+            "mime_types": "mp4,webm"
+        },
+        {
+            "key": "field_stpd_testo",
+            "name": "progetto_testo",
+            "label": "Testo sotto il titolo",
+            "type": "textarea",
+            "rows": 4
+        },
+        {
+            "key": "field_stpd_agenzie",
+            "name": "progetto_agenzie",
+            "label": "Agenzia di comunicazione o partner",
+            "type": "repeater",
+            "min": 0,
+            "max": 0,
+            "button_label": "Aggiungi agenzia o partner",
+            "layout": "table",
+            "sub_fields": [
+                {
+                    "key": "field_stpd_ag_tipo",
+                    "name": "tipo",
+                    "label": "Tipo",
+                    "type": "select",
+                    "choices": {
+                        "agenzia": "Agenzia",
+                        "partner": "Partner"
+                    },
+                    "default_value": "agenzia",
+                    "return_format": "value",
+                    "multiple": 0,
+                    "allow_null": 0
+                },
+                {
+                    "key": "field_stpd_ag_link",
+                    "name": "link",
+                    "label": "Nome e link",
+                    "type": "link",
+                    "return_format": "array"
+                }
+            ]
+        },
+        {
+            "key": "field_stpd_tab_correlati",
+            "label": "Progetti correlati",
+            "type": "tab"
+        },
+        {
+            "key": "field_stpr_correlati",
+            "name": "progetto_correlati",
+            "label": "Progetti correlati",
+            "type": "relationship",
+            "return_format": "id",
+            "min": 0,
+            "max": 3,
+            "post_type": [
+                "portfolio"
+            ]
+        }
+    ]
+}

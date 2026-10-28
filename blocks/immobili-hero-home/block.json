@@ -1,0 +1,40 @@
+{
+	"apiVersion": 3,
+	"name": "starter-theme/immobili-hero-home",
+	"title": "Immobili — Hero home",
+	"description": "Prima sezione della home: testo, pulsanti, immagine e card dell'immobile in",
+	"category": "starter",
+	"icon": "cover-image",
+	"keywords": [
+		"hero",
+		"home",
+		"immobili"
+	],
+	"supports": {
+		"align": [
+			"full"
+		],
+		"anchor": true,
+		"customClassName": true
+	},
+	"textdomain": "slug-theme",
+	"attributes": {
+		"align": {
+			"type": "string",
+			"default": "full"
+		},
+		"name": {
+			"type": "string"
+		},
+		"mode": {
+			"type": "string"
+		},
+		"data": {
+			"type": "object",
+			"default": {}
+		},
+		"id": {
+			"type": "string"
+		}
+	}
+}

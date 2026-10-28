@@ -1,5 +1,5 @@
 # Release del plugin: al push di un tag "vX.Y.Z" crea lo zip pulito (cartella starter-blocks/) e lo allega alla release.
-# Il tag deve coincidere con "Version:" nel file principale del plugin. Lo zip contiene build/index.js già compilato (src/ e build.sh restano fuori).
+# Il tag deve coincidere con "Version:" nel file principale del plugin. Lo zip contiene build/ già compilato (src/ e build.sh restano fuori).
 name: Release
 
 on:
@@ -12,7 +12,7 @@ permissions:
 
 env:
   SLUG: starter-blocks
-  MAIN: starter-blocks-poc.php
+  MAIN: starter-blocks.php
 
 jobs:
   release:
@@ -30,7 +30,7 @@ jobs:
           fi
 
       - name: Il file compilato deve esistere
-        run: test -s build/index.js
+        run: test -s build/index.js && test -s build/meta.js
 
       - name: Crea lo zip pulito
         run: |

@@ -1,0 +1,143 @@
+[
+    {
+        "key": "field_stpm_colonne",
+        "name": "colonne",
+        "label": "Colonne",
+        "type": "select",
+        "choices": {
+            "1": "1 colonna (a tutta larghezza)",
+            "2": "2 colonne",
+            "3": "3 colonne"
+        },
+        "default_value": "1",
+        "return_format": "value",
+        "multiple": 0
+    },
+    {
+        "key": "field_stpm_proporzione",
+        "name": "proporzione",
+        "label": "Proporzione",
+        "type": "select",
+        "choices": {
+            "originale": "Originale",
+            "16-9": "16:9",
+            "4-3": "4:3",
+            "1-1": "1:1",
+            "4-5": "4:5",
+            "3-4": "3:4"
+        },
+        "default_value": "originale",
+        "return_format": "value",
+        "multiple": 0
+    },
+    {
+        "key": "field_stpm_elementi",
+        "name": "elementi",
+        "label": "Immagini e video",
+        "type": "repeater",
+        "min": 0,
+        "max": 0,
+        "button_label": "Aggiungi immagine o video",
+        "layout": "block",
+        "sub_fields": [
+            {
+                "key": "field_stpm_tipo",
+                "name": "elementi_tipo",
+                "label": "Tipo",
+                "type": "button_group",
+                "choices": {
+                    "immagine": "Immagine",
+                    "video": "Video"
+                },
+                "default_value": "immagine",
+                "return_format": "value",
+                "layout": "horizontal"
+            },
+            {
+                "key": "field_stpm_immagine",
+                "name": "elementi_immagine",
+                "label": "Immagine",
+                "type": "image",
+                "return_format": "id",
+                "conditional_logic": [
+                    [
+                        {
+                            "field": "field_stpm_tipo",
+                            "operator": "==",
+                            "value": "immagine"
+                        }
+                    ]
+                ]
+            },
+            {
+                "key": "field_stpm_video",
+                "name": "elementi_video",
+                "label": "Video",
+                "type": "file",
+                "return_format": "array",
+                "mime_types": "mp4,webm",
+                "conditional_logic": [
+                    [
+                        {
+                            "field": "field_stpm_tipo",
+                            "operator": "==",
+                            "value": "video"
+                        }
+                    ]
+                ]
+            },
+            {
+                "key": "field_stpm_copertina",
+                "name": "elementi_copertina",
+                "label": "Copertina del video",
+                "type": "image",
+                "return_format": "id",
+                "conditional_logic": [
+                    [
+                        {
+                            "field": "field_stpm_tipo",
+                            "operator": "==",
+                            "value": "video"
+                        }
+                    ]
+                ]
+            },
+            {
+                "key": "field_stpm_didascalia",
+                "name": "elementi_didascalia",
+                "label": "Didascalia",
+                "type": "text"
+            }
+        ]
+    },
+    {
+        "key": "field_group_starter_progetto_media_adv_tab",
+        "label": "Avanzate",
+        "type": "tab"
+    },
+    {
+        "key": "field_group_starter_progetto_media_adv_bg",
+        "name": "sfondo_sezione",
+        "label": "Sfondo della sezione",
+        "type": "select",
+        "choices": {
+            "": "Nessuno",
+            "chiaro": "Chiaro (grigio leggero)",
+            "slot_1": "Background",
+            "slot_2": "Testo",
+            "slot_3": "Primario",
+            "slot_4": "Secondario",
+            "slot_5": "Accento",
+            "slot_6": "Secondario Accenteo"
+        },
+        "return_format": "value",
+        "multiple": 0
+    },
+    {
+        "key": "field_group_starter_progetto_media_adv_classes",
+        "name": "classi_custom",
+        "label": "Classi CSS personalizzate",
+        "type": "text",
+        "placeholder": "mt2 pb4 pb2-sma"
+    }
+]

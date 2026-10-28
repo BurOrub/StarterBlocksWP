@@ -1,0 +1,42 @@
+{
+	"apiVersion": 3,
+	"name": "starter-theme/progetto-testo",
+	"title": "Progetto — testo",
+	"description": "Blocco di testo di una scheda progetto: occhiello (es. Contesto), titolo e paragrafi.",
+	"category": "starter",
+	"icon": "text",
+	"keywords": [
+		"progetto",
+		"portfolio",
+		"testo",
+		"caso studio"
+	],
+	"supports": {
+		"align": [
+			"full"
+		],
+		"anchor": true,
+		"customClassName": true,
+		"html": false
+	},
+	"textdomain": "slug-theme",
+	"attributes": {
+		"align": {
+			"type": "string",
+			"default": "full"
+		},
+		"name": {
+			"type": "string"
+		},
+		"mode": {
+			"type": "string"
+		},
+		"data": {
+			"type": "object",
+			"default": {}
+		},
+		"id": {
+			"type": "string"
+		}
+	}
+}

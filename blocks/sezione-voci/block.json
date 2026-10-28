@@ -1,0 +1,41 @@
+{
+	"apiVersion": 3,
+	"name": "starter-theme/sezione-voci",
+	"title": "Sezione voci",
+	"description": "Titolo e un elenco di voci: numerato, a card, a icone o a passi.",
+	"category": "starter",
+	"icon": "list-view",
+	"keywords": [
+		"servizi",
+		"perché",
+		"voci",
+		"card"
+	],
+	"supports": {
+		"align": [
+			"full"
+		],
+		"anchor": true,
+		"customClassName": true
+	},
+	"textdomain": "slug-theme",
+	"attributes": {
+		"align": {
+			"type": "string",
+			"default": "full"
+		},
+		"name": {
+			"type": "string"
+		},
+		"mode": {
+			"type": "string"
+		},
+		"data": {
+			"type": "object",
+			"default": {}
+		},
+		"id": {
+			"type": "string"
+		}
+	}
+}

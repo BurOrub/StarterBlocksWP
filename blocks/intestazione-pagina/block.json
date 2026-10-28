@@ -1,0 +1,40 @@
+{
+	"apiVersion": 3,
+	"name": "starter-theme/intestazione-pagina",
+	"title": "Intestazione pagina",
+	"description": "Occhiello, titolo H1 e paragrafo in cima alla pagina, con briciole di pane.",
+	"category": "starter",
+	"icon": "heading",
+	"keywords": [
+		"intestazione",
+		"titolo",
+		"h1"
+	],
+	"supports": {
+		"align": [
+			"full"
+		],
+		"anchor": true,
+		"customClassName": true
+	},
+	"textdomain": "slug-theme",
+	"attributes": {
+		"align": {
+			"type": "string",
+			"default": "full"
+		},
+		"name": {
+			"type": "string"
+		},
+		"mode": {
+			"type": "string"
+		},
+		"data": {
+			"type": "object",
+			"default": {}
+		},
+		"id": {
+			"type": "string"
+		}
+	}
+}

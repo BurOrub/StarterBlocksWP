@@ -1,0 +1,27 @@
+[
+    {
+        "key": "field_map_indirizzo",
+        "name": "indirizzo",
+        "label": "Indirizzo",
+        "type": "text"
+    },
+    {
+        "key": "field_map_pulsante",
+        "name": "pulsante",
+        "label": "Testo pulsante",
+        "type": "text",
+        "placeholder": "Indicazioni stradali"
+    },
+    {
+        "key": "field_group_starter_mappa_adv_tab",
+        "label": "Avanzate",
+        "type": "tab"
+    },
+    {
+        "key": "field_group_starter_mappa_adv_classes",
+        "name": "classi_custom",
+        "label": "Classi CSS personalizzate",
+        "type": "text",
+        "placeholder": "mt2 pb4 pb2-sma"
+    }
+]

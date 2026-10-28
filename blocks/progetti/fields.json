@@ -1,0 +1,1262 @@
+[
+    {
+        "key": "field_stpj_tab_layout",
+        "label": "Layout",
+        "type": "tab"
+    },
+    {
+        "key": "field_stpj_visual",
+        "name": "visualizzazione",
+        "label": "Visualizzazione",
+        "type": "select",
+        "choices": {
+            "classica": "Classica",
+            "masonry": "Masonry",
+            "blocchi": "A blocchi",
+            "sfalsata": "Sfalsata"
+        },
+        "default_value": "classica",
+        "return_format": "value",
+        "multiple": 0,
+        "width": 100
+    },
+    {
+        "key": "field_stpj_per_pagina",
+        "name": "per_pagina",
+        "label": "Progetti per pagina",
+        "type": "number",
+        "default_value": 12,
+        "min": 1,
+        "max": 60,
+        "width": 100
+    },
+    {
+        "key": "field_stpj_colonne",
+        "name": "colonne",
+        "label": "Colonne",
+        "type": "select",
+        "choices": {
+            "2": "2",
+            "3": "3",
+            "4": "4",
+            "5": "5"
+        },
+        "default_value": "3",
+        "return_format": "value",
+        "multiple": 0,
+        "width": 33,
+        "conditional_logic": [
+            [
+                {
+                    "field": "field_stpj_visual",
+                    "operator": "==",
+                    "value": "classica"
+                }
+            ],
+            [
+                {
+                    "field": "field_stpj_visual",
+                    "operator": "==",
+                    "value": "masonry"
+                }
+            ]
+        ]
+    },
+    {
+        "key": "field_stpj_colonne_tablet",
+        "name": "colonne_tablet",
+        "label": "Tablet",
+        "type": "select",
+        "choices": {
+            "1": "1",
+            "2": "2",
+            "3": "3"
+        },
+        "default_value": "2",
+        "return_format": "value",
+        "multiple": 0,
+        "width": 33,
+        "conditional_logic": [
+            [
+                {
+                    "field": "field_stpj_visual",
+                    "operator": "==",
+                    "value": "classica"
+                }
+            ],
+            [
+                {
+                    "field": "field_stpj_visual",
+                    "operator": "==",
+                    "value": "masonry"
+                }
+            ]
+        ]
+    },
+    {
+        "key": "field_stpj_colonne_mobile",
+        "name": "colonne_mobile",
+        "label": "Mobile",
+        "type": "select",
+        "choices": {
+            "1": "1",
+            "2": "2"
+        },
+        "default_value": "1",
+        "return_format": "value",
+        "multiple": 0,
+        "width": 34,
+        "conditional_logic": [
+            [
+                {
+                    "field": "field_stpj_visual",
+                    "operator": "==",
+                    "value": "classica"
+                }
+            ],
+            [
+                {
+                    "field": "field_stpj_visual",
+                    "operator": "==",
+                    "value": "masonry"
+                }
+            ]
+        ]
+    },
+    {
+        "key": "field_stpj_proporzione",
+        "name": "proporzione",
+        "label": "Proporzione delle immagini",
+        "type": "select",
+        "choices": {
+            "16-9": "16:9",
+            "3-2": "3:2",
+            "4-3": "4:3",
+            "1-1": "1:1",
+            "4-5": "4:5 (verticale)"
+        },
+        "default_value": "4-3",
+        "return_format": "value",
+        "multiple": 0,
+        "width": 100,
+        "conditional_logic": [
+            [
+                {
+                    "field": "field_stpj_visual",
+                    "operator": "==",
+                    "value": "classica"
+                }
+            ]
+        ]
+    },
+    {
+        "key": "field_stpj_quarto",
+        "name": "quarto_elemento",
+        "label": "Quarto elemento a tutta larghezza",
+        "type": "true_false",
+        "default_value": 0,
+        "width": 100,
+        "conditional_logic": [
+            [
+                {
+                    "field": "field_stpj_visual",
+                    "operator": "==",
+                    "value": "blocchi"
+                }
+            ]
+        ]
+    },
+    {
+        "key": "field_stpj_gap_x",
+        "name": "gap_orizzontale",
+        "label": "Distanza orizzontale",
+        "type": "number",
+        "default_value": 20,
+        "min": 0,
+        "max": 120,
+        "append": "px",
+        "width": 50
+    },
+    {
+        "key": "field_stpj_gap_y",
+        "name": "gap_verticale",
+        "label": "Distanza verticale",
+        "type": "number",
+        "default_value": 20,
+        "min": 0,
+        "max": 200,
+        "append": "px",
+        "width": 50
+    },
+    {
+        "key": "field_stpj_hr_video",
+        "type": "message",
+        "message": "<hr style=\"margin:4px 0\">"
+    },
+    {
+        "key": "field_stpj_video_hover",
+        "name": "video_hover",
+        "label": "Video al passaggio del mouse",
+        "type": "true_false",
+        "default_value": 1,
+        "width": 100
+    },
+    {
+        "key": "field_stpj_tab_titolo",
+        "label": "Titolo",
+        "type": "tab"
+    },
+    {
+        "key": "field_stpj_anim_logo",
+        "name": "animazione_logo",
+        "label": "Animazione logo",
+        "type": "true_false",
+        "default_value": 0,
+        "width": 50
+    },
+    {
+        "key": "field_stpj_logo_tinta",
+        "name": "logo_tinta",
+        "label": "Logo colore sfondo",
+        "type": "true_false",
+        "default_value": 1,
+        "width": 50,
+        "conditional_logic": [
+            [
+                {
+                    "field": "field_stpj_anim_logo",
+                    "operator": "==",
+                    "value": "1"
+                }
+            ]
+        ]
+    },
+    {
+        "key": "field_stpj_ordine_titoli",
+        "name": "ordine_titoli",
+        "label": "Ordine",
+        "type": "select",
+        "choices": {
+            "riassunto": "Prima il riassunto, poi il cliente",
+            "cliente": "Prima il cliente, poi il riassunto"
+        },
+        "default_value": "riassunto",
+        "return_format": "value",
+        "multiple": 0,
+        "width": 100
+    },
+    {
+        "key": "field_stpj_msg_riassunto",
+        "type": "message",
+        "message": "<strong style=\"font-size:14px\">RIASSUNTO</strong>"
+    },
+    {
+        "key": "field_stpj_riass_mostra",
+        "name": "riassunto_mostra",
+        "label": "Mostra il riassunto",
+        "type": "true_false",
+        "default_value": 1,
+        "width": 50
+    },
+    {
+        "key": "field_stpj_riass_tag",
+        "name": "riassunto_tag",
+        "label": "Tag HTML",
+        "type": "select",
+        "choices": {
+            "h1": "H1",
+            "h2": "H2",
+            "h3": "H3",
+            "h4": "H4",
+            "h5": "H5",
+            "h6": "H6",
+            "p": "Paragrafo",
+            "span": "Span"
+        },
+        "default_value": "h2",
+        "return_format": "value",
+        "multiple": 0,
+        "width": 50,
+        "conditional_logic": [
+            [
+                {
+                    "field": "field_stpj_riass_mostra",
+                    "operator": "==",
+                    "value": "1"
+                }
+            ]
+        ]
+    },
+    {
+        "key": "field_stpj_riass_dim",
+        "name": "riassunto_dimensione",
+        "label": "Dimensione",
+        "type": "select",
+        "choices": {
+            "Titoli del tema": {
+                "display": "Titolo grande (hero) — 56–104 px",
+                "title-1": "Titolo 1 (H1) — 44–80 px",
+                "title-2": "Titolo 2 (H2) — 36–56 px",
+                "title-3": "Titolo 3 (H3) — 28–40 px",
+                "title-4": "Titolo 4 (H4) — 24–32 px",
+                "title-5": "Titolo 5 (H5) — 18–20 px",
+                "eyebrow": "Titolo 6 / etichetta (H6) — 13 px"
+            },
+            "Misure di Gutenberg": {
+                "xx-large": "XXL (frase in evidenza) — 32–52 px",
+                "x-large": "XL (testo in evidenza) — 22–28 px",
+                "large": "Grande (testo introduttivo) — 19–22 px",
+                "medium": "Media (testo) — 17–18 px",
+                "small": "Piccola — 15 px"
+            }
+        },
+        "default_value": "title-5",
+        "return_format": "value",
+        "multiple": 0,
+        "width": 100,
+        "conditional_logic": [
+            [
+                {
+                    "field": "field_stpj_riass_mostra",
+                    "operator": "==",
+                    "value": "1"
+                }
+            ]
+        ]
+    },
+    {
+        "key": "field_stpj_riass_pos",
+        "name": "riassunto_posizione",
+        "label": "Posizione",
+        "type": "select",
+        "choices": {
+            "sotto": "Sotto l'immagine",
+            "sopra": "Sopra l'immagine"
+        },
+        "default_value": "sotto",
+        "return_format": "value",
+        "multiple": 0,
+        "width": 100,
+        "conditional_logic": [
+            [
+                {
+                    "field": "field_stpj_riass_mostra",
+                    "operator": "==",
+                    "value": "1"
+                },
+                {
+                    "field": "field_stpj_anim_logo",
+                    "operator": "!=",
+                    "value": "1"
+                }
+            ]
+        ]
+    },
+    {
+        "key": "field_stpj_riass_col",
+        "name": "riassunto_colore",
+        "label": "Colore",
+        "type": "select",
+        "choices": {
+            "": "Predefinito",
+            "slot_1": "Background",
+            "slot_2": "Testo",
+            "slot_3": "Primario",
+            "slot_4": "Secondario",
+            "slot_5": "Accento",
+            "slot_6": "Secondario Accenteo"
+        },
+        "return_format": "value",
+        "multiple": 0,
+        "width": 50,
+        "conditional_logic": [
+            [
+                {
+                    "field": "field_stpj_riass_mostra",
+                    "operator": "==",
+                    "value": "1"
+                }
+            ]
+        ]
+    },
+    {
+        "key": "field_stpj_riass_hov",
+        "name": "riassunto_colore_hover",
+        "label": "Colore hover",
+        "type": "select",
+        "choices": {
+            "": "Nessuno",
+            "slot_1": "Background",
+            "slot_2": "Testo",
+            "slot_3": "Primario",
+            "slot_4": "Secondario",
+            "slot_5": "Accento",
+            "slot_6": "Secondario Accenteo"
+        },
+        "return_format": "value",
+        "multiple": 0,
+        "width": 50,
+        "conditional_logic": [
+            [
+                {
+                    "field": "field_stpj_riass_mostra",
+                    "operator": "==",
+                    "value": "1"
+                }
+            ]
+        ]
+    },
+    {
+        "key": "field_stpj_msg_cliente",
+        "type": "message",
+        "message": "<strong style=\"font-size:14px\">NOME DEL CLIENTE</strong>"
+    },
+    {
+        "key": "field_stpj_cli_mostra",
+        "name": "cliente_mostra",
+        "label": "Mostra il nome del cliente",
+        "type": "true_false",
+        "default_value": 1,
+        "width": 50,
+        "conditional_logic": [
+            [
+                {
+                    "field": "field_stpj_anim_logo",
+                    "operator": "!=",
+                    "value": "1"
+                }
+            ]
+        ]
+    },
+    {
+        "key": "field_stpj_cli_tag",
+        "name": "cliente_tag",
+        "label": "Tag HTML",
+        "type": "select",
+        "choices": {
+            "h1": "H1",
+            "h2": "H2",
+            "h3": "H3",
+            "h4": "H4",
+            "h5": "H5",
+            "h6": "H6",
+            "p": "Paragrafo",
+            "span": "Span"
+        },
+        "default_value": "p",
+        "return_format": "value",
+        "multiple": 0,
+        "width": 50,
+        "conditional_logic": [
+            [
+                {
+                    "field": "field_stpj_cli_mostra",
+                    "operator": "==",
+                    "value": "1"
+                },
+                {
+                    "field": "field_stpj_anim_logo",
+                    "operator": "!=",
+                    "value": "1"
+                }
+            ]
+        ]
+    },
+    {
+        "key": "field_stpj_cli_dim",
+        "name": "cliente_dimensione",
+        "label": "Dimensione",
+        "type": "select",
+        "choices": {
+            "Titoli del tema": {
+                "display": "Titolo grande (hero) — 56–104 px",
+                "title-1": "Titolo 1 (H1) — 44–80 px",
+                "title-2": "Titolo 2 (H2) — 36–56 px",
+                "title-3": "Titolo 3 (H3) — 28–40 px",
+                "title-4": "Titolo 4 (H4) — 24–32 px",
+                "title-5": "Titolo 5 (H5) — 18–20 px",
+                "eyebrow": "Titolo 6 / etichetta (H6) — 13 px"
+            },
+            "Misure di Gutenberg": {
+                "xx-large": "XXL (frase in evidenza) — 32–52 px",
+                "x-large": "XL (testo in evidenza) — 22–28 px",
+                "large": "Grande (testo introduttivo) — 19–22 px",
+                "medium": "Media (testo) — 17–18 px",
+                "small": "Piccola — 15 px"
+            }
+        },
+        "default_value": "small",
+        "return_format": "value",
+        "multiple": 0,
+        "width": 100,
+        "conditional_logic": [
+            [
+                {
+                    "field": "field_stpj_cli_mostra",
+                    "operator": "==",
+                    "value": "1"
+                },
+                {
+                    "field": "field_stpj_anim_logo",
+                    "operator": "!=",
+                    "value": "1"
+                }
+            ]
+        ]
+    },
+    {
+        "key": "field_stpj_cli_pos",
+        "name": "cliente_posizione",
+        "label": "Posizione",
+        "type": "select",
+        "choices": {
+            "sotto": "Sotto l'immagine",
+            "sopra": "Sopra l'immagine"
+        },
+        "default_value": "sotto",
+        "return_format": "value",
+        "multiple": 0,
+        "width": 100,
+        "conditional_logic": [
+            [
+                {
+                    "field": "field_stpj_cli_mostra",
+                    "operator": "==",
+                    "value": "1"
+                },
+                {
+                    "field": "field_stpj_anim_logo",
+                    "operator": "!=",
+                    "value": "1"
+                }
+            ]
+        ]
+    },
+    {
+        "key": "field_stpj_cli_col",
+        "name": "cliente_colore",
+        "label": "Colore",
+        "type": "select",
+        "choices": {
+            "": "Predefinito",
+            "slot_1": "Background",
+            "slot_2": "Testo",
+            "slot_3": "Primario",
+            "slot_4": "Secondario",
+            "slot_5": "Accento",
+            "slot_6": "Secondario Accenteo"
+        },
+        "return_format": "value",
+        "multiple": 0,
+        "width": 50,
+        "conditional_logic": [
+            [
+                {
+                    "field": "field_stpj_cli_mostra",
+                    "operator": "==",
+                    "value": "1"
+                }
+            ],
+            [
+                {
+                    "field": "field_stpj_anim_logo",
+                    "operator": "==",
+                    "value": "1"
+                }
+            ]
+        ]
+    },
+    {
+        "key": "field_stpj_cli_hov",
+        "name": "cliente_colore_hover",
+        "label": "Colore hover",
+        "type": "select",
+        "choices": {
+            "": "Nessuno",
+            "slot_1": "Background",
+            "slot_2": "Testo",
+            "slot_3": "Primario",
+            "slot_4": "Secondario",
+            "slot_5": "Accento",
+            "slot_6": "Secondario Accenteo"
+        },
+        "return_format": "value",
+        "multiple": 0,
+        "width": 50,
+        "conditional_logic": [
+            [
+                {
+                    "field": "field_stpj_cli_mostra",
+                    "operator": "==",
+                    "value": "1"
+                },
+                {
+                    "field": "field_stpj_anim_logo",
+                    "operator": "!=",
+                    "value": "1"
+                }
+            ]
+        ]
+    },
+    {
+        "key": "field_stpj_tab_categorie",
+        "label": "Categorie",
+        "type": "tab"
+    },
+    {
+        "key": "field_stpj_stile_cat",
+        "name": "stile_categorie",
+        "label": "Categorie sulle card",
+        "type": "select",
+        "choices": {
+            "testo": "Testo con simbolo",
+            "tab_sotto": "Tab sotto l'immagine",
+            "tab_sopra": "Tab sopra l'immagine",
+            "nessuna": "Nessuna"
+        },
+        "default_value": "testo",
+        "return_format": "value",
+        "multiple": 0,
+        "width": 100
+    },
+    {
+        "key": "field_stpj_forma_cat",
+        "name": "forma_categorie",
+        "label": "Tab sopra l'immagine",
+        "type": "select",
+        "choices": {
+            "singole": "Una tab per categoria",
+            "unica": "Un'unica tab con il simbolo tra le categorie"
+        },
+        "default_value": "singole",
+        "return_format": "value",
+        "multiple": 0,
+        "width": 100,
+        "conditional_logic": [
+            [
+                {
+                    "field": "field_stpj_stile_cat",
+                    "operator": "==",
+                    "value": "tab_sopra"
+                }
+            ]
+        ]
+    },
+    {
+        "key": "field_stpj_pieno_cat",
+        "name": "riempimento_categorie",
+        "label": "Tab piene o vuote",
+        "type": "select",
+        "choices": {
+            "piene": "Piene",
+            "vuote": "Vuote (solo contorno)"
+        },
+        "default_value": "piene",
+        "return_format": "value",
+        "multiple": 0,
+        "width": 100,
+        "conditional_logic": [
+            [
+                {
+                    "field": "field_stpj_stile_cat",
+                    "operator": "==",
+                    "value": "tab_sotto"
+                }
+            ],
+            [
+                {
+                    "field": "field_stpj_stile_cat",
+                    "operator": "==",
+                    "value": "tab_sopra"
+                },
+                {
+                    "field": "field_stpj_forma_cat",
+                    "operator": "==",
+                    "value": "singole"
+                }
+            ]
+        ]
+    },
+    {
+        "key": "field_stpj_sep_cat",
+        "name": "separatore_categorie",
+        "label": "Simbolo tra le categorie",
+        "type": "select",
+        "choices": {
+            "dot": "·",
+            "bullet": "•",
+            "slash": "/",
+            "dslash": "//",
+            "pipe": "|",
+            "dash": "—",
+            "plus": "+",
+            "star": "✦",
+            "asterisk": "✱",
+            "diamond": "◆",
+            "arrow": "→"
+        },
+        "default_value": "dot",
+        "return_format": "value",
+        "multiple": 0,
+        "width": 100,
+        "conditional_logic": [
+            [
+                {
+                    "field": "field_stpj_stile_cat",
+                    "operator": "==",
+                    "value": "testo"
+                }
+            ],
+            [
+                {
+                    "field": "field_stpj_stile_cat",
+                    "operator": "==",
+                    "value": "tab_sopra"
+                },
+                {
+                    "field": "field_stpj_forma_cat",
+                    "operator": "==",
+                    "value": "unica"
+                }
+            ]
+        ]
+    },
+    {
+        "key": "field_stpj_sepcol_cat",
+        "name": "colore_simbolo_categorie",
+        "label": "Colore del simbolo",
+        "type": "select",
+        "choices": {
+            "": "Predefinito",
+            "slot_1": "Background",
+            "slot_2": "Testo",
+            "slot_3": "Primario",
+            "slot_4": "Secondario",
+            "slot_5": "Accento",
+            "slot_6": "Secondario Accenteo"
+        },
+        "return_format": "value",
+        "multiple": 0,
+        "width": 100,
+        "conditional_logic": [
+            [
+                {
+                    "field": "field_stpj_stile_cat",
+                    "operator": "==",
+                    "value": "testo"
+                }
+            ],
+            [
+                {
+                    "field": "field_stpj_stile_cat",
+                    "operator": "==",
+                    "value": "tab_sopra"
+                },
+                {
+                    "field": "field_stpj_forma_cat",
+                    "operator": "==",
+                    "value": "unica"
+                }
+            ]
+        ]
+    },
+    {
+        "key": "field_stpj_pos_cat",
+        "name": "posizione_categorie",
+        "label": "Posizione rispetto al titolo",
+        "type": "select",
+        "choices": {
+            "dopo": "Dopo il titolo",
+            "prima": "Prima del titolo"
+        },
+        "default_value": "dopo",
+        "return_format": "value",
+        "multiple": 0,
+        "width": 100,
+        "conditional_logic": [
+            [
+                {
+                    "field": "field_stpj_stile_cat",
+                    "operator": "==",
+                    "value": "testo"
+                }
+            ],
+            [
+                {
+                    "field": "field_stpj_stile_cat",
+                    "operator": "==",
+                    "value": "tab_sotto"
+                }
+            ]
+        ]
+    },
+    {
+        "key": "field_stpj_mt_cat",
+        "name": "margine_sopra_categorie",
+        "label": "Margine sopra",
+        "type": "select",
+        "choices": {
+            "": "0 (nessuno)",
+            "mt05": "MT05 — 0,5 rem",
+            "mt1": "MT1 — 1 rem",
+            "mt2": "MT2 — 2 rem",
+            "mt3": "MT3 — 3 rem",
+            "mt4": "MT4 — 4 rem",
+            "mt5": "MT5 — 5 rem",
+            "mt6": "MT6 — 6 rem",
+            "mt7": "MT7 — 7 rem",
+            "mt8": "MT8 — 8 rem",
+            "mt9": "MT9 — 9 rem",
+            "mt10": "MT10 — 10 rem",
+            "mt20": "MT20 — 20 px"
+        },
+        "return_format": "value",
+        "multiple": 0,
+        "width": 50,
+        "conditional_logic": [
+            [
+                {
+                    "field": "field_stpj_stile_cat",
+                    "operator": "==",
+                    "value": "testo"
+                }
+            ],
+            [
+                {
+                    "field": "field_stpj_stile_cat",
+                    "operator": "==",
+                    "value": "tab_sotto"
+                }
+            ]
+        ]
+    },
+    {
+        "key": "field_stpj_mb_cat",
+        "name": "margine_sotto_categorie",
+        "label": "Margine sotto",
+        "type": "select",
+        "choices": {
+            "": "0 (nessuno)",
+            "mb05": "MB05 — 0,5 rem",
+            "mb1": "MB1 — 1 rem",
+            "mb2": "MB2 — 2 rem",
+            "mb3": "MB3 — 3 rem",
+            "mb4": "MB4 — 4 rem",
+            "mb5": "MB5 — 5 rem",
+            "mb6": "MB6 — 6 rem",
+            "mb7": "MB7 — 7 rem",
+            "mb8": "MB8 — 8 rem",
+            "mb9": "MB9 — 9 rem",
+            "mb10": "MB10 — 10 rem",
+            "mb20": "MB20 — 20 px"
+        },
+        "return_format": "value",
+        "multiple": 0,
+        "width": 50,
+        "conditional_logic": [
+            [
+                {
+                    "field": "field_stpj_stile_cat",
+                    "operator": "==",
+                    "value": "testo"
+                }
+            ],
+            [
+                {
+                    "field": "field_stpj_stile_cat",
+                    "operator": "==",
+                    "value": "tab_sotto"
+                }
+            ]
+        ]
+    },
+    {
+        "key": "field_stpj_maiusc_cat",
+        "name": "maiuscole_categorie",
+        "label": "Categorie in maiuscolo",
+        "type": "true_false",
+        "default_value": 0,
+        "width": 100,
+        "conditional_logic": [
+            [
+                {
+                    "field": "field_stpj_stile_cat",
+                    "operator": "!=",
+                    "value": "nessuna"
+                }
+            ]
+        ]
+    },
+    {
+        "key": "field_stpj_colore_cat",
+        "name": "colore_categorie",
+        "label": "Colore delle categorie",
+        "type": "select",
+        "choices": {
+            "": "— Non impostato —",
+            "slot_1": "Background",
+            "slot_2": "Testo",
+            "slot_3": "Primario",
+            "slot_4": "Secondario",
+            "slot_5": "Accento",
+            "slot_6": "Secondario Accenteo"
+        },
+        "return_format": "value",
+        "multiple": 0,
+        "width": 100,
+        "conditional_logic": [
+            [
+                {
+                    "field": "field_stpj_stile_cat",
+                    "operator": "!=",
+                    "value": "nessuna"
+                }
+            ]
+        ]
+    },
+    {
+        "key": "field_stpj_tab_filtri",
+        "label": "Filtri",
+        "type": "tab"
+    },
+    {
+        "key": "field_stpj_schede",
+        "name": "schede",
+        "label": "Visualizza filtri",
+        "type": "true_false",
+        "default_value": 1,
+        "width": 50
+    },
+    {
+        "key": "field_stpj_filtri_stile",
+        "name": "filtri_stile",
+        "label": "Stile dei filtri",
+        "type": "select",
+        "choices": {
+            "linea": "Classica",
+            "testo": "Testo grande",
+            "pillole": "Pillole",
+            "frase": "Frase"
+        },
+        "default_value": "linea",
+        "return_format": "value",
+        "multiple": 0,
+        "width": 100,
+        "conditional_logic": [
+            [
+                {
+                    "field": "field_stpj_schede",
+                    "operator": "==",
+                    "value": "1"
+                }
+            ]
+        ]
+    },
+    {
+        "key": "field_stpj_filtri_frase",
+        "name": "filtri_frase",
+        "label": "Testo prima dei filtri",
+        "type": "text",
+        "default_value": "Realizziamo progetti di",
+        "width": 100,
+        "conditional_logic": [
+            [
+                {
+                    "field": "field_stpj_schede",
+                    "operator": "==",
+                    "value": "1"
+                },
+                {
+                    "field": "field_stpj_filtri_stile",
+                    "operator": "==",
+                    "value": "frase"
+                }
+            ]
+        ]
+    },
+    {
+        "key": "field_stpj_flt_col",
+        "name": "filtri_colore",
+        "label": "Colore",
+        "type": "select",
+        "choices": {
+            "": "Predefinito",
+            "slot_1": "Background",
+            "slot_2": "Testo",
+            "slot_3": "Primario",
+            "slot_4": "Secondario",
+            "slot_5": "Accento",
+            "slot_6": "Secondario Accenteo"
+        },
+        "return_format": "value",
+        "multiple": 0,
+        "width": 33,
+        "conditional_logic": [
+            [
+                {
+                    "field": "field_stpj_schede",
+                    "operator": "==",
+                    "value": "1"
+                }
+            ]
+        ]
+    },
+    {
+        "key": "field_stpj_flt_hov",
+        "name": "filtri_colore_hover",
+        "label": "Hover",
+        "type": "select",
+        "choices": {
+            "": "Predefinito",
+            "slot_1": "Background",
+            "slot_2": "Testo",
+            "slot_3": "Primario",
+            "slot_4": "Secondario",
+            "slot_5": "Accento",
+            "slot_6": "Secondario Accenteo"
+        },
+        "return_format": "value",
+        "multiple": 0,
+        "width": 33,
+        "conditional_logic": [
+            [
+                {
+                    "field": "field_stpj_schede",
+                    "operator": "==",
+                    "value": "1"
+                }
+            ]
+        ]
+    },
+    {
+        "key": "field_stpj_flt_att",
+        "name": "filtri_colore_attivo",
+        "label": "Attivo",
+        "type": "select",
+        "choices": {
+            "": "Predefinito",
+            "slot_1": "Background",
+            "slot_2": "Testo",
+            "slot_3": "Primario",
+            "slot_4": "Secondario",
+            "slot_5": "Accento",
+            "slot_6": "Secondario Accenteo"
+        },
+        "return_format": "value",
+        "multiple": 0,
+        "width": 34,
+        "conditional_logic": [
+            [
+                {
+                    "field": "field_stpj_schede",
+                    "operator": "==",
+                    "value": "1"
+                }
+            ]
+        ]
+    },
+    {
+        "key": "field_stpj_filtri_modo",
+        "name": "filtri_modo",
+        "label": "Quando scegli una categoria",
+        "type": "select",
+        "choices": {
+            "stessa": "Stessa pagina, senza ricaricare",
+            "nuova": "Nuova pagina (ricarica)"
+        },
+        "default_value": "stessa",
+        "return_format": "value",
+        "multiple": 0,
+        "width": 100,
+        "conditional_logic": [
+            [
+                {
+                    "field": "field_stpj_schede",
+                    "operator": "==",
+                    "value": "1"
+                }
+            ]
+        ]
+    },
+    {
+        "key": "field_stpj_conteggi",
+        "name": "conteggi",
+        "label": "Numero di progetti nelle schede",
+        "type": "true_false",
+        "default_value": 1,
+        "width": 50,
+        "conditional_logic": [
+            [
+                {
+                    "field": "field_stpj_schede",
+                    "operator": "==",
+                    "value": "1"
+                }
+            ]
+        ]
+    },
+    {
+        "key": "field_stpj_solo",
+        "name": "solo_categorie",
+        "label": "Mostra solo queste categorie",
+        "type": "taxonomy",
+        "return_format": "id",
+        "multiple": 0,
+        "taxonomy": "portfolio_category",
+        "field_type": "multi_select",
+        "width": 100
+    },
+    {
+        "key": "field_stpj_tab_animazioni",
+        "label": "Animazioni",
+        "type": "tab"
+    },
+    {
+        "key": "field_stpj_transizione",
+        "name": "transizione",
+        "label": "Passaggio dall'elenco al progetto",
+        "type": "select",
+        "choices": {
+            "nessuna": "Nessuna animazione",
+            "cover": "La copertina si ingrandisce a tutto schermo",
+            "dissolvenza": "Caricamento con dissolvenza",
+            "tendina": "Tendina dal basso"
+        },
+        "default_value": "nessuna",
+        "return_format": "value",
+        "multiple": 0,
+        "width": 100
+    },
+    {
+        "key": "field_stpj_tr_testo",
+        "name": "transizione_testo",
+        "label": "Scritta",
+        "type": "text",
+        "default_value": "Caricamento",
+        "width": 100,
+        "conditional_logic": [
+            [
+                {
+                    "field": "field_stpj_transizione",
+                    "operator": "==",
+                    "value": "dissolvenza"
+                }
+            ]
+        ]
+    },
+    {
+        "key": "field_stpj_tr_contatore",
+        "name": "transizione_contatore",
+        "label": "Percentuale da 0 a 100%",
+        "type": "true_false",
+        "default_value": 0,
+        "width": 100,
+        "conditional_logic": [
+            [
+                {
+                    "field": "field_stpj_transizione",
+                    "operator": "==",
+                    "value": "dissolvenza"
+                }
+            ]
+        ]
+    },
+    {
+        "key": "field_stpj_tr_sfondo",
+        "name": "transizione_sfondo",
+        "label": "Sfondo",
+        "type": "select",
+        "choices": {
+            "": "Predefinito",
+            "slot_1": "Background",
+            "slot_2": "Testo",
+            "slot_3": "Primario",
+            "slot_4": "Secondario",
+            "slot_5": "Accento",
+            "slot_6": "Secondario Accenteo"
+        },
+        "return_format": "value",
+        "multiple": 0,
+        "width": 50,
+        "conditional_logic": [
+            [
+                {
+                    "field": "field_stpj_transizione",
+                    "operator": "==",
+                    "value": "dissolvenza"
+                }
+            ],
+            [
+                {
+                    "field": "field_stpj_transizione",
+                    "operator": "==",
+                    "value": "tendina"
+                }
+            ]
+        ]
+    },
+    {
+        "key": "field_stpj_tr_colore",
+        "name": "transizione_colore_testo",
+        "label": "Testo",
+        "type": "select",
+        "choices": {
+            "": "Predefinito",
+            "slot_1": "Background",
+            "slot_2": "Testo",
+            "slot_3": "Primario",
+            "slot_4": "Secondario",
+            "slot_5": "Accento",
+            "slot_6": "Secondario Accenteo"
+        },
+        "return_format": "value",
+        "multiple": 0,
+        "width": 50,
+        "conditional_logic": [
+            [
+                {
+                    "field": "field_stpj_transizione",
+                    "operator": "==",
+                    "value": "dissolvenza"
+                }
+            ],
+            [
+                {
+                    "field": "field_stpj_transizione",
+                    "operator": "==",
+                    "value": "tendina"
+                }
+            ]
+        ]
+    },
+    {
+        "key": "field_group_starter_progetti_adv_tab",
+        "label": "Avanzate",
+        "type": "tab"
+    },
+    {
+        "key": "field_group_starter_progetti_adv_bg",
+        "name": "sfondo_sezione",
+        "label": "Sfondo della sezione",
+        "type": "select",
+        "choices": {
+            "": "Nessuno",
+            "chiaro": "Chiaro (grigio leggero)",
+            "slot_1": "Background",
+            "slot_2": "Testo",
+            "slot_3": "Primario",
+            "slot_4": "Secondario",
+            "slot_5": "Accento",
+            "slot_6": "Secondario Accenteo"
+        },
+        "return_format": "value",
+        "multiple": 0
+    },
+    {
+        "key": "field_group_starter_progetti_adv_classes",
+        "name": "classi_custom",
+        "label": "Classi CSS personalizzate",
+        "type": "text",
+        "placeholder": "mt2 pb4 pb2-sma"
+    }
+]

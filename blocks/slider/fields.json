@@ -1,0 +1,315 @@
+[
+    {
+        "key": "field_stsl_modalita",
+        "name": "modalita",
+        "label": "Tipo",
+        "type": "button_group",
+        "choices": {
+            "singolo": "Slider singolo",
+            "carosello": "Carosello"
+        },
+        "default_value": "carosello",
+        "return_format": "value",
+        "layout": "horizontal"
+    },
+    {
+        "key": "field_stsl_larghezza",
+        "name": "larghezza",
+        "label": "Larghezza",
+        "type": "button_group",
+        "choices": {
+            "contenuta": "Nella misura del sito",
+            "piena": "A tutto schermo"
+        },
+        "default_value": "contenuta",
+        "return_format": "value",
+        "layout": "horizontal"
+    },
+    {
+        "key": "field_stsl_colonne_desktop",
+        "name": "colonne_desktop",
+        "label": "Immagini visibili su desktop",
+        "type": "select",
+        "choices": {
+            "1": "1",
+            "2": "2",
+            "3": "3",
+            "4": "4",
+            "5": "5",
+            "6": "6"
+        },
+        "default_value": "3",
+        "return_format": "value",
+        "multiple": 0,
+        "width": 33,
+        "conditional_logic": [
+            [
+                {
+                    "field": "field_stsl_modalita",
+                    "operator": "==",
+                    "value": "carosello"
+                }
+            ]
+        ]
+    },
+    {
+        "key": "field_stsl_colonne_tablet",
+        "name": "colonne_tablet",
+        "label": "Su tablet (fino a 1100px)",
+        "type": "select",
+        "choices": {
+            "1": "1",
+            "2": "2",
+            "3": "3",
+            "4": "4"
+        },
+        "default_value": "2",
+        "return_format": "value",
+        "multiple": 0,
+        "width": 33,
+        "conditional_logic": [
+            [
+                {
+                    "field": "field_stsl_modalita",
+                    "operator": "==",
+                    "value": "carosello"
+                }
+            ]
+        ]
+    },
+    {
+        "key": "field_stsl_colonne_mobile",
+        "name": "colonne_mobile",
+        "label": "Su mobile (fino a 640px)",
+        "type": "select",
+        "choices": {
+            "1": "1",
+            "2": "2"
+        },
+        "default_value": "1",
+        "return_format": "value",
+        "multiple": 0,
+        "width": 33,
+        "conditional_logic": [
+            [
+                {
+                    "field": "field_stsl_modalita",
+                    "operator": "==",
+                    "value": "carosello"
+                }
+            ]
+        ]
+    },
+    {
+        "key": "field_stsl_gap",
+        "name": "gap",
+        "label": "Distanza tra le immagini (px)",
+        "type": "number",
+        "default_value": 16,
+        "min": 0,
+        "max": 100,
+        "append": "px",
+        "width": 50
+    },
+    {
+        "key": "field_stsl_proporzione",
+        "name": "proporzione",
+        "label": "Proporzione delle immagini",
+        "type": "select",
+        "choices": {
+            "16-9": "16:9",
+            "3-2": "3:2",
+            "4-3": "4:3",
+            "1-1": "1:1",
+            "4-5": "4:5 (verticale)",
+            "21-9": "21:9 (panoramica)",
+            "originale": "Originale (ognuna la sua)"
+        },
+        "default_value": "16-9",
+        "return_format": "value",
+        "multiple": 0,
+        "width": 50
+    },
+    {
+        "key": "field_stsl_anteprima",
+        "name": "anteprima",
+        "label": "Fai intravedere le immagini vicine",
+        "type": "true_false",
+        "default_value": 0,
+        "width": 50
+    },
+    {
+        "key": "field_stsl_anteprima_px",
+        "name": "anteprima_px",
+        "label": "Quanto si vede (px)",
+        "type": "number",
+        "default_value": 50,
+        "min": 10,
+        "max": 200,
+        "append": "px",
+        "width": 50,
+        "conditional_logic": [
+            [
+                {
+                    "field": "field_stsl_anteprima",
+                    "operator": "==",
+                    "value": "1"
+                }
+            ]
+        ]
+    },
+    {
+        "key": "field_stsl_frecce",
+        "name": "frecce",
+        "label": "Frecce",
+        "type": "select",
+        "choices": {
+            "immagine": "Sull'immagine, ai lati",
+            "sopra": "Sopra lo slider",
+            "sotto": "Sotto lo slider",
+            "nessuna": "Nessuna"
+        },
+        "default_value": "immagine",
+        "return_format": "value",
+        "multiple": 0,
+        "width": 50
+    },
+    {
+        "key": "field_stsl_frecce_stile",
+        "name": "frecce_stile",
+        "label": "Stile delle frecce",
+        "type": "select",
+        "choices": {
+            "": "Predefinito del blocco",
+            "pieno-1": "Pieno 1",
+            "contorno-1": "Contorno 1",
+            "pieno-2": "Pieno 2",
+            "contorno-2": "Contorno 2"
+        },
+        "return_format": "value",
+        "multiple": 0,
+        "width": 50,
+        "conditional_logic": [
+            [
+                {
+                    "field": "field_stsl_frecce",
+                    "operator": "!=",
+                    "value": "nessuna"
+                }
+            ]
+        ]
+    },
+    {
+        "key": "field_stsl_paginazione",
+        "name": "paginazione",
+        "label": "Paginazione",
+        "type": "select",
+        "choices": {
+            "puntini": "Puntini",
+            "contatore": "Contatore (1 / 5)",
+            "barra": "Barra di avanzamento",
+            "nessuna": "Nessuna"
+        },
+        "default_value": "puntini",
+        "return_format": "value",
+        "multiple": 0,
+        "width": 50
+    },
+    {
+        "key": "field_stsl_autoplay",
+        "name": "autoplay",
+        "label": "Scorrimento automatico",
+        "type": "true_false",
+        "default_value": 0,
+        "width": 50
+    },
+    {
+        "key": "field_stsl_autoplay_secondi",
+        "name": "autoplay_secondi",
+        "label": "Secondi per slide",
+        "type": "number",
+        "default_value": 5,
+        "min": 1,
+        "max": 30,
+        "append": "s",
+        "width": 50,
+        "conditional_logic": [
+            [
+                {
+                    "field": "field_stsl_autoplay",
+                    "operator": "==",
+                    "value": "1"
+                }
+            ]
+        ]
+    },
+    {
+        "key": "field_stsl_ricomincia",
+        "name": "ricomincia",
+        "label": "Ricomincia dall'inizio",
+        "type": "true_false",
+        "default_value": 1,
+        "width": 50
+    },
+    {
+        "key": "field_stsl_didascalie",
+        "name": "didascalie",
+        "label": "Mostra le didascalie",
+        "type": "true_false",
+        "default_value": 0,
+        "width": 50
+    },
+    {
+        "key": "field_stsl_angoli",
+        "name": "angoli",
+        "label": "Angoli delle immagini",
+        "type": "button_group",
+        "choices": {
+            "sito": "Come \"Bordi del sito\"",
+            "nessuno": "Squadrati"
+        },
+        "default_value": "sito",
+        "return_format": "value",
+        "layout": "horizontal"
+    },
+    {
+        "key": "field_stsl_slide",
+        "name": "slide",
+        "label": "Immagini",
+        "type": "gallery",
+        "return_format": "id",
+        "min": 1,
+        "max": 0,
+        "mime_types": "jpg,jpeg,png,gif,webp,avif,mp4,webm"
+    },
+    {
+        "key": "field_group_starter_slider_adv_tab",
+        "label": "Avanzate",
+        "type": "tab"
+    },
+    {
+        "key": "field_group_starter_slider_adv_bg",
+        "name": "sfondo_sezione",
+        "label": "Sfondo della sezione",
+        "type": "select",
+        "choices": {
+            "": "Nessuno",
+            "chiaro": "Chiaro (grigio leggero)",
+            "slot_1": "Background",
+            "slot_2": "Testo",
+            "slot_3": "Primario",
+            "slot_4": "Secondario",
+            "slot_5": "Accento",
+            "slot_6": "Secondario Accenteo"
+        },
+        "return_format": "value",
+        "multiple": 0
+    },
+    {
+        "key": "field_group_starter_slider_adv_classes",
+        "name": "classi_custom",
+        "label": "Classi CSS personalizzate",
+        "type": "text",
+        "placeholder": "mt2 pb4 pb2-sma"
+    }
+]

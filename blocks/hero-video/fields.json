@@ -1,0 +1,135 @@
+[
+    {
+        "key": "field_sthv_video",
+        "name": "video",
+        "label": "Video",
+        "type": "file",
+        "return_format": "array",
+        "mime_types": "mp4,webm"
+    },
+    {
+        "key": "field_sthv_copertina",
+        "name": "copertina",
+        "label": "Copertina",
+        "type": "image",
+        "return_format": "id"
+    },
+    {
+        "key": "field_sthv_occhiello",
+        "name": "occhiello",
+        "label": "Occhiello",
+        "type": "text"
+    },
+    {
+        "key": "field_tag_7f8f206b8a31",
+        "name": "occhiello_tag",
+        "label": "Tag HTML dell'occhiello",
+        "type": "select",
+        "choices": {
+            "auto": "Automatico (consigliato)",
+            "h1": "H1",
+            "h2": "H2",
+            "h3": "H3",
+            "h4": "H4",
+            "h5": "H5",
+            "h6": "H6",
+            "span": "span",
+            "p": "p"
+        },
+        "default_value": "auto",
+        "return_format": "value",
+        "multiple": 0
+    },
+    {
+        "key": "field_sthv_titolo",
+        "name": "titolo",
+        "label": "Titolo",
+        "type": "textarea",
+        "rows": 2
+    },
+    {
+        "key": "field_tag_6ec28ee7e163",
+        "name": "titolo_tag",
+        "label": "Tag HTML del titolo",
+        "type": "select",
+        "choices": {
+            "auto": "Automatico (consigliato)",
+            "h1": "H1",
+            "h2": "H2",
+            "h3": "H3",
+            "h4": "H4",
+            "h5": "H5",
+            "h6": "H6",
+            "span": "span",
+            "p": "p"
+        },
+        "default_value": "auto",
+        "return_format": "value",
+        "multiple": 0
+    },
+    {
+        "key": "field_sthv_testo",
+        "name": "testo",
+        "label": "Testo",
+        "type": "textarea",
+        "rows": 3
+    },
+    {
+        "key": "field_sthv_link",
+        "name": "link",
+        "label": "Pulsante",
+        "type": "link",
+        "return_format": "array"
+    },
+    {
+        "key": "field_btn_af87cde8240a",
+        "name": "link_stile",
+        "label": "Stile del pulsante",
+        "type": "select",
+        "choices": {
+            "": "Predefinito del blocco",
+            "pieno-1": "Pieno 1",
+            "contorno-1": "Contorno 1",
+            "pieno-2": "Pieno 2",
+            "contorno-2": "Contorno 2",
+            "chiaro": "Chiaro (sopra le foto)"
+        },
+        "return_format": "value",
+        "multiple": 0
+    },
+    {
+        "key": "field_sthv_link2",
+        "name": "link_2",
+        "label": "Secondo pulsante",
+        "type": "link",
+        "return_format": "array"
+    },
+    {
+        "key": "field_btn_1fb78a623238",
+        "name": "link_2_stile",
+        "label": "Stile del pulsante",
+        "type": "select",
+        "choices": {
+            "": "Predefinito del blocco",
+            "pieno-1": "Pieno 1",
+            "contorno-1": "Contorno 1",
+            "pieno-2": "Pieno 2",
+            "contorno-2": "Contorno 2",
+            "chiaro": "Chiaro (sopra le foto)"
+        },
+        "return_format": "value",
+        "multiple": 0
+    },
+    {
+        "key": "field_group_starter_hero_video_adv_tab",
+        "label": "Avanzate",
+        "type": "tab"
+    },
+    {
+        "key": "field_group_starter_hero_video_adv_classes",
+        "name": "classi_custom",
+        "label": "Classi CSS personalizzate",
+        "type": "text",
+        "placeholder": "mt2 pb4 pb2-sma"
+    }
+]

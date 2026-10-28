@@ -1,0 +1,189 @@
+[
+    {
+        "key": "field_sta_lato_media",
+        "name": "lato_media",
+        "label": "Lato della foto",
+        "type": "select",
+        "choices": {
+            "sinistra": "Sinistra",
+            "destra": "Destra"
+        },
+        "default_value": "sinistra",
+        "return_format": "value",
+        "multiple": 0
+    },
+    {
+        "key": "field_sta_sfondo",
+        "name": "sfondo",
+        "label": "Sfondo",
+        "type": "select",
+        "choices": {
+            "nessuno": "Nessuno",
+            "muted": "Riquadro chiaro"
+        },
+        "default_value": "nessuno",
+        "return_format": "value",
+        "multiple": 0
+    },
+    {
+        "key": "field_sta_livello",
+        "name": "livello",
+        "label": "Livello titolo",
+        "type": "select",
+        "choices": {
+            "h2": "H2",
+            "h1": "H1"
+        },
+        "default_value": "h2",
+        "return_format": "value",
+        "multiple": 0
+    },
+    {
+        "key": "field_sta_occhiello",
+        "name": "occhiello",
+        "label": "Occhiello",
+        "type": "text"
+    },
+    {
+        "key": "field_tag_d6023c18ebb1",
+        "name": "occhiello_tag",
+        "label": "Tag HTML dell'occhiello",
+        "type": "select",
+        "choices": {
+            "auto": "Automatico (consigliato)",
+            "h1": "H1",
+            "h2": "H2",
+            "h3": "H3",
+            "h4": "H4",
+            "h5": "H5",
+            "h6": "H6",
+            "span": "span",
+            "p": "p"
+        },
+        "default_value": "auto",
+        "return_format": "value",
+        "multiple": 0
+    },
+    {
+        "key": "field_sta_titolo",
+        "name": "titolo",
+        "label": "Titolo",
+        "type": "text"
+    },
+    {
+        "key": "field_tag_7ab3675d1e17",
+        "name": "titolo_tag",
+        "label": "Tag HTML del titolo",
+        "type": "select",
+        "choices": {
+            "auto": "Automatico (consigliato)",
+            "h1": "H1",
+            "h2": "H2",
+            "h3": "H3",
+            "h4": "H4",
+            "h5": "H5",
+            "h6": "H6",
+            "span": "span",
+            "p": "p"
+        },
+        "default_value": "auto",
+        "return_format": "value",
+        "multiple": 0
+    },
+    {
+        "key": "field_sta_testo",
+        "name": "testo",
+        "label": "Testo",
+        "type": "textarea"
+    },
+    {
+        "key": "field_sta_checklist",
+        "name": "checklist",
+        "label": "Checklist",
+        "type": "repeater",
+        "min": 0,
+        "max": 0,
+        "button_label": "Aggiungi voce",
+        "layout": "table",
+        "sub_fields": [
+            {
+                "key": "field_sta_checklist_voce",
+                "name": "voce",
+                "label": "Voce",
+                "type": "text"
+            }
+        ]
+    },
+    {
+        "key": "field_sta_citazione",
+        "name": "citazione",
+        "label": "Citazione (facoltativa)",
+        "type": "text"
+    },
+    {
+        "key": "field_sta_link",
+        "name": "link",
+        "label": "Link",
+        "type": "link",
+        "return_format": "array"
+    },
+    {
+        "key": "field_btn_b9d3cdd258b6",
+        "name": "link_stile",
+        "label": "Stile del pulsante",
+        "type": "select",
+        "choices": {
+            "": "Predefinito del blocco",
+            "pieno-1": "Pieno 1",
+            "contorno-1": "Contorno 1",
+            "pieno-2": "Pieno 2",
+            "contorno-2": "Contorno 2"
+        },
+        "return_format": "value",
+        "multiple": 0
+    },
+    {
+        "key": "field_sta_immagine",
+        "name": "immagine",
+        "label": "Foto principale",
+        "type": "image",
+        "return_format": "id"
+    },
+    {
+        "key": "field_sta_immagine_2",
+        "name": "immagine_2",
+        "label": "Seconda foto (facoltativa)",
+        "type": "image",
+        "return_format": "id"
+    },
+    {
+        "key": "field_group_starter_testo_affiancato_adv_tab",
+        "label": "Avanzate",
+        "type": "tab"
+    },
+    {
+        "key": "field_group_starter_testo_affiancato_adv_bg",
+        "name": "sfondo_sezione",
+        "label": "Sfondo della sezione",
+        "type": "select",
+        "choices": {
+            "": "Nessuno",
+            "chiaro": "Chiaro (grigio leggero)",
+            "slot_1": "Background",
+            "slot_2": "Testo",
+            "slot_3": "Primario",
+            "slot_4": "Secondario",
+            "slot_5": "Accento",
+            "slot_6": "Secondario Accenteo"
+        },
+        "return_format": "value",
+        "multiple": 0
+    },
+    {
+        "key": "field_group_starter_testo_affiancato_adv_classes",
+        "name": "classi_custom",
+        "label": "Classi CSS personalizzate",
+        "type": "text",
+        "placeholder": "mt2 pb4 pb2-sma"
+    }
+]

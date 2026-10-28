@@ -2,11 +2,11 @@
 /**
  * Plugin Name: Starter Blocks
  * Description: Blocchi custom di Gutenberg per il tema Starter.
- * Version: 0.1.0
+ * Version: 0.2.0
  * Requires PHP: 7.4
  * License: GPL v2 or later
  * License URI: https://www.gnu.org/licenses/gpl-2.0.html
- * Text Domain: starter-blocks-poc
+ * Text Domain: starter-blocks
  *
  * @package Starter_Blocks_POC
  */
@@ -17,6 +17,9 @@ if ( ! defined( 'ABSPATH' ) ) {
 
 define( 'STARTER_POC_DIR', plugin_dir_path( __FILE__ ) );
 define( 'STARTER_POC_URL', plugin_dir_url( __FILE__ ) );
+
+require_once STARTER_POC_DIR . 'inc/engine.php';
+require_once STARTER_POC_DIR . 'inc/meta.php';
 
 /**
  * Righe del repeater "voci" dai dati salvati dal blocco (stesso formato di ACF: voci = numero di righe, voci_0_voci_titolo = valore).
@@ -44,7 +47,7 @@ function starter_poc_rows( $data ) {
 	return $rows;
 }
 
-/* Disegno del blocco sul sito e nell'anteprima dell'editor (stesso HTML del blocco ACF). */
+/* Disegno del blocco sul sito e nell'anteprima dell'editor (stesso HTML del blocco). */
 function starter_poc_render_servizi( $attributes, $content, $block ) {
 	if ( ! function_exists( 'starter_icon' ) ) {
 		return ''; // Serve il tema Starter.
@@ -87,6 +90,18 @@ add_action(
 				'buttonChoices' => function_exists( 'starter_button_style_choices' ) ? starter_button_style_choices() : array( '' => '—' ),
 			)
 		);
+
+		$defs = array();
+
+		foreach ( starter_blocks_registry() as $block ) {
+			$defs[ $block['json']['name'] ] = array(
+				'title'  => $block['json']['title'],
+				'fields' => $block['fields'],
+				'inner'  => $block['json']['starterInner'] ?? null,
+			);
+		}
+
+		wp_localize_script( $handle, 'starterBlocksDefs', $defs );
 
 		unset( $json['$schema'] );
 		$json['render_callback']      = 'starter_poc_render_servizi';

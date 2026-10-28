@@ -1,0 +1,132 @@
+[
+    {
+        "key": "field_stua_occhiello",
+        "name": "occhiello",
+        "label": "Occhiello",
+        "type": "text"
+    },
+    {
+        "key": "field_tag_2d09718add36",
+        "name": "occhiello_tag",
+        "label": "Tag HTML dell'occhiello",
+        "type": "select",
+        "choices": {
+            "auto": "Automatico (consigliato)",
+            "h1": "H1",
+            "h2": "H2",
+            "h3": "H3",
+            "h4": "H4",
+            "h5": "H5",
+            "h6": "H6",
+            "span": "span",
+            "p": "p"
+        },
+        "default_value": "auto",
+        "return_format": "value",
+        "multiple": 0
+    },
+    {
+        "key": "field_stua_titolo",
+        "name": "titolo",
+        "label": "Titolo",
+        "type": "text"
+    },
+    {
+        "key": "field_tag_a871dfd32489",
+        "name": "titolo_tag",
+        "label": "Tag HTML del titolo",
+        "type": "select",
+        "choices": {
+            "auto": "Automatico (consigliato)",
+            "h1": "H1",
+            "h2": "H2",
+            "h3": "H3",
+            "h4": "H4",
+            "h5": "H5",
+            "h6": "H6",
+            "span": "span",
+            "p": "p"
+        },
+        "default_value": "auto",
+        "return_format": "value",
+        "multiple": 0
+    },
+    {
+        "key": "field_stua_testo",
+        "name": "testo",
+        "label": "Testo",
+        "type": "textarea",
+        "rows": 3
+    },
+    {
+        "key": "field_stua_link",
+        "name": "link",
+        "label": "Pulsante",
+        "type": "link",
+        "return_format": "array"
+    },
+    {
+        "key": "field_btn_0b70e900ff5f",
+        "name": "link_stile",
+        "label": "Stile del pulsante",
+        "type": "select",
+        "choices": {
+            "": "Predefinito del blocco",
+            "pieno-1": "Pieno 1",
+            "contorno-1": "Contorno 1",
+            "pieno-2": "Pieno 2",
+            "contorno-2": "Contorno 2"
+        },
+        "return_format": "value",
+        "multiple": 0
+    },
+    {
+        "key": "field_stua_categoria",
+        "name": "categoria",
+        "label": "Categoria",
+        "type": "taxonomy",
+        "return_format": "id",
+        "multiple": 0,
+        "taxonomy": "category",
+        "field_type": "select"
+    },
+    {
+        "key": "field_stua_numero",
+        "name": "numero",
+        "label": "Quanti",
+        "type": "number",
+        "default_value": 3,
+        "min": 1,
+        "max": 9
+    },
+    {
+        "key": "field_group_starter_ultimi_articoli_adv_tab",
+        "label": "Avanzate",
+        "type": "tab"
+    },
+    {
+        "key": "field_group_starter_ultimi_articoli_adv_bg",
+        "name": "sfondo_sezione",
+        "label": "Sfondo della sezione",
+        "type": "select",
+        "choices": {
+            "": "Nessuno",
+            "chiaro": "Chiaro (grigio leggero)",
+            "slot_1": "Background",
+            "slot_2": "Testo",
+            "slot_3": "Primario",
+            "slot_4": "Secondario",
+            "slot_5": "Accento",
+            "slot_6": "Secondario Accenteo"
+        },
+        "return_format": "value",
+        "multiple": 0
+    },
+    {
+        "key": "field_group_starter_ultimi_articoli_adv_classes",
+        "name": "classi_custom",
+        "label": "Classi CSS personalizzate",
+        "type": "text",
+        "placeholder": "mt2 pb4 pb2-sma"
+    }
+]

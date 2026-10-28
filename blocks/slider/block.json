@@ -1,0 +1,42 @@
+{
+	"apiVersion": 3,
+	"name": "starter-theme/slider",
+	"title": "Slider",
+	"description": "Slider singolo o carosello di immagini: quante vedere per dispositivo, anteprima delle vicine, distanza, frecce, paginazione e autoplay.",
+	"category": "starter",
+	"icon": "images-alt2",
+	"keywords": [
+		"slider",
+		"carosello",
+		"gallery",
+		"immagini",
+		"galleria"
+	],
+	"supports": {
+		"align": [
+			"full"
+		],
+		"anchor": true,
+		"customClassName": true
+	},
+	"textdomain": "slug-theme",
+	"attributes": {
+		"align": {
+			"type": "string",
+			"default": "full"
+		},
+		"name": {
+			"type": "string"
+		},
+		"mode": {
+			"type": "string"
+		},
+		"data": {
+			"type": "object",
+			"default": {}
+		},
+		"id": {
+			"type": "string"
+		}
+	}
+}

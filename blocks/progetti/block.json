@@ -1,0 +1,42 @@
+{
+	"apiVersion": 3,
+	"name": "starter-theme/progetti",
+	"title": "Elenco progetti",
+	"description": "Griglia dei progetti del portfolio con le schede delle categorie: mettila in una pagina (es. Portfolio).",
+	"category": "starter",
+	"icon": "screenoptions",
+	"keywords": [
+		"progetto",
+		"portfolio",
+		"elenco",
+		"griglia"
+	],
+	"supports": {
+		"align": [
+			"full"
+		],
+		"anchor": true,
+		"customClassName": true,
+		"html": false
+	},
+	"textdomain": "slug-theme",
+	"attributes": {
+		"align": {
+			"type": "string",
+			"default": "full"
+		},
+		"name": {
+			"type": "string"
+		},
+		"mode": {
+			"type": "string"
+		},
+		"data": {
+			"type": "object",
+			"default": {}
+		},
+		"id": {
+			"type": "string"
+		}
+	}
+}

@@ -1,0 +1,39 @@
+{
+	"apiVersion": 3,
+	"name": "starter-theme/mappa",
+	"title": "Mappa",
+	"description": "Mappa Google a tutta larghezza con pulsante per le indicazioni.",
+	"category": "starter",
+	"icon": "location",
+	"keywords": [
+		"mappa",
+		"indicazioni"
+	],
+	"supports": {
+		"align": [
+			"full"
+		],
+		"anchor": true,
+		"customClassName": true
+	},
+	"textdomain": "slug-theme",
+	"attributes": {
+		"align": {
+			"type": "string",
+			"default": "full"
+		},
+		"name": {
+			"type": "string"
+		},
+		"mode": {
+			"type": "string"
+		},
+		"data": {
+			"type": "object",
+			"default": {}
+		},
+		"id": {
+			"type": "string"
+		}
+	}
+}

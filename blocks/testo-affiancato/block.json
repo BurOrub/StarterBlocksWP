@@ -1,0 +1,40 @@
+{
+	"apiVersion": 3,
+	"name": "starter-theme/testo-affiancato",
+	"title": "Testo affiancato",
+	"description": "Testo e fino a 2 foto composte, affiancati.",
+	"category": "starter",
+	"icon": "align-pull-left",
+	"keywords": [
+		"testo",
+		"foto",
+		"chi siamo"
+	],
+	"supports": {
+		"align": [
+			"full"
+		],
+		"anchor": true,
+		"customClassName": true
+	},
+	"textdomain": "slug-theme",
+	"attributes": {
+		"align": {
+			"type": "string",
+			"default": "full"
+		},
+		"name": {
+			"type": "string"
+		},
+		"mode": {
+			"type": "string"
+		},
+		"data": {
+			"type": "object",
+			"default": {}
+		},
+		"id": {
+			"type": "string"
+		}
+	}
+}

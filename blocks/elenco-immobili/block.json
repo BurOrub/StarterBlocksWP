@@ -1,0 +1,40 @@
+{
+	"apiVersion": 3,
+	"name": "starter-theme/elenco-immobili",
+	"title": "Immobili — Elenco",
+	"description": "Tutti gli immobili con filtri (GET, senza AJAX), 9 per pagina con paginazione.",
+	"category": "starter",
+	"icon": "list-view",
+	"keywords": [
+		"immobili",
+		"elenco",
+		"filtri"
+	],
+	"supports": {
+		"align": [
+			"full"
+		],
+		"anchor": true,
+		"customClassName": true
+	},
+	"textdomain": "slug-theme",
+	"attributes": {
+		"align": {
+			"type": "string",
+			"default": "full"
+		},
+		"name": {
+			"type": "string"
+		},
+		"mode": {
+			"type": "string"
+		},
+		"data": {
+			"type": "object",
+			"default": {}
+		},
+		"id": {
+			"type": "string"
+		}
+	}
+}

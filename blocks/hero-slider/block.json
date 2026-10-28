@@ -1,0 +1,41 @@
+{
+	"apiVersion": 3,
+	"name": "starter-theme/hero-slider",
+	"title": "Hero con slider",
+	"description": "Foto a tutta larghezza che cambiano in dissolvenza, titolo, testo e pulsante.",
+	"category": "starter",
+	"icon": "format-gallery",
+	"keywords": [
+		"hero",
+		"slider",
+		"copertina"
+	],
+	"supports": {
+		"align": [
+			"full"
+		],
+		"anchor": true,
+		"customClassName": true,
+		"html": false
+	},
+	"textdomain": "slug-theme",
+	"attributes": {
+		"align": {
+			"type": "string",
+			"default": "full"
+		},
+		"name": {
+			"type": "string"
+		},
+		"mode": {
+			"type": "string"
+		},
+		"data": {
+			"type": "object",
+			"default": {}
+		},
+		"id": {
+			"type": "string"
+		}
+	}
+}

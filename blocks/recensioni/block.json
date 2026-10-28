@@ -1,0 +1,39 @@
+{
+	"apiVersion": 3,
+	"name": "starter-theme/recensioni",
+	"title": "Recensioni",
+	"description": "Carosello di recensioni con 5 stelle, scorrevole con le frecce.",
+	"category": "starter",
+	"icon": "format-quote",
+	"keywords": [
+		"recensioni",
+		"testimonianze"
+	],
+	"supports": {
+		"align": [
+			"full"
+		],
+		"anchor": true,
+		"customClassName": true
+	},
+	"textdomain": "slug-theme",
+	"attributes": {
+		"align": {
+			"type": "string",
+			"default": "full"
+		},
+		"name": {
+			"type": "string"
+		},
+		"mode": {
+			"type": "string"
+		},
+		"data": {
+			"type": "object",
+			"default": {}
+		},
+		"id": {
+			"type": "string"
+		}
+	}
+}

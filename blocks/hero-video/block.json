@@ -1,0 +1,42 @@
+{
+	"apiVersion": 3,
+	"name": "starter-theme/hero-video",
+	"title": "Hero con video",
+	"description": "Video a tutta larghezza (muto, in ciclo) con velo scuro, titolo, testo e pulsante: alternativa alla hero con slider.",
+	"category": "starter",
+	"icon": "video-alt3",
+	"keywords": [
+		"hero",
+		"video",
+		"copertina",
+		"cover"
+	],
+	"supports": {
+		"align": [
+			"full"
+		],
+		"anchor": true,
+		"customClassName": true,
+		"html": false
+	},
+	"textdomain": "slug-theme",
+	"attributes": {
+		"align": {
+			"type": "string",
+			"default": "full"
+		},
+		"name": {
+			"type": "string"
+		},
+		"mode": {
+			"type": "string"
+		},
+		"data": {
+			"type": "object",
+			"default": {}
+		},
+		"id": {
+			"type": "string"
+		}
+	}
+}
