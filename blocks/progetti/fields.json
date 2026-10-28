@@ -150,6 +150,27 @@
         ]
     },
     {
+        "key": "field_stpj_img_mb",
+        "name": "immagine_margine_sotto",
+        "label": "Immagine: spazio sotto",
+        "type": "select",
+        "choices": {
+            "": "0 (nessuno)",
+            "mb05": "MB05 — 0,5 rem",
+            "mb1": "MB1 — 1 rem",
+            "mb2": "MB2 — 2 rem",
+            "mb3": "MB3 — 3 rem",
+            "mb4": "MB4 — 4 rem",
+            "mb5": "MB5 — 5 rem",
+            "mb6": "MB6 — 6 rem",
+            "mb7": "MB7 — 7 rem",
+            "mb8": "MB8 — 8 rem",
+            "mb9": "MB9 — 9 rem",
+            "mb10": "MB10 — 10 rem",
+            "mb20": "MB20 — 20 px"
+        }
+    },
+    {
         "key": "field_stpj_quarto",
         "name": "quarto_elemento",
         "label": "Quarto elemento a tutta larghezza",
@@ -325,6 +346,36 @@
         ]
     },
     {
+        "key": "field_stpj_riassunto_mb",
+        "name": "riassunto_margine_sotto",
+        "label": "Riassunto: spazio sotto",
+        "type": "select",
+        "choices": {
+            "": "0 (nessuno)",
+            "mb05": "MB05 — 0,5 rem",
+            "mb1": "MB1 — 1 rem",
+            "mb2": "MB2 — 2 rem",
+            "mb3": "MB3 — 3 rem",
+            "mb4": "MB4 — 4 rem",
+            "mb5": "MB5 — 5 rem",
+            "mb6": "MB6 — 6 rem",
+            "mb7": "MB7 — 7 rem",
+            "mb8": "MB8 — 8 rem",
+            "mb9": "MB9 — 9 rem",
+            "mb10": "MB10 — 10 rem",
+            "mb20": "MB20 — 20 px"
+        },
+        "conditional_logic": [
+            [
+                {
+                    "field": "field_stpj_riass_mostra",
+                    "operator": "==",
+                    "value": "1"
+                }
+            ]
+        ]
+    },
+    {
         "key": "field_stpj_riass_pos",
         "name": "riassunto_posizione",
         "label": "Posizione",
@@ -489,6 +540,41 @@
         "return_format": "value",
         "multiple": 0,
         "width": 100,
+        "conditional_logic": [
+            [
+                {
+                    "field": "field_stpj_cli_mostra",
+                    "operator": "==",
+                    "value": "1"
+                },
+                {
+                    "field": "field_stpj_anim_logo",
+                    "operator": "!=",
+                    "value": "1"
+                }
+            ]
+        ]
+    },
+    {
+        "key": "field_stpj_cliente_mb",
+        "name": "cliente_margine_sotto",
+        "label": "Cliente: spazio sotto",
+        "type": "select",
+        "choices": {
+            "": "0 (nessuno)",
+            "mb05": "MB05 — 0,5 rem",
+            "mb1": "MB1 — 1 rem",
+            "mb2": "MB2 — 2 rem",
+            "mb3": "MB3 — 3 rem",
+            "mb4": "MB4 — 4 rem",
+            "mb5": "MB5 — 5 rem",
+            "mb6": "MB6 — 6 rem",
+            "mb7": "MB7 — 7 rem",
+            "mb8": "MB8 — 8 rem",
+            "mb9": "MB9 — 9 rem",
+            "mb10": "MB10 — 10 rem",
+            "mb20": "MB20 — 20 px"
+        },
         "conditional_logic": [
             [
                 {

@@ -159,6 +159,7 @@ $starter_wrapper = get_block_wrapper_attributes( array(
 						'titles'    => $starter_title_opts,
 						'video'     => $starter_video_hover,
 						'reveal'    => $starter_reveal,
+						'img_mb'    => $starter_card['img_mb'],
 					)
 				);
 				$starter_cards[] = ob_get_clean();
