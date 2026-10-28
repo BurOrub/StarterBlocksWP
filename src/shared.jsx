@@ -5,7 +5,17 @@ const { useState, useEffect } = wp.element;
 const { useSelect } = wp.data;
 const apiFetch = wp.apiFetch;
 
-export const toChoices = ( obj ) => Object.keys( obj || {} ).map( ( value ) => ( { value, label: obj[ value ] } ) );
+/* Scelte di un menu: valore => etichetta. Le scelte raggruppate (gruppo => { valore => etichetta }) diventano un'intestazione non selezionabile seguita dalle sue voci. */
+export const toChoices = ( obj ) =>
+	Object.keys( obj || {} ).flatMap( ( value ) => {
+		const label = obj[ value ];
+
+		if ( label && 'object' === typeof label ) {
+			return [ { value: '__group_' + value, label: value, disabled: true }, ...Object.keys( label ).map( ( v ) => ( { value: v, label: '\u00a0\u00a0' + label[ v ] } ) ) ];
+		}
+
+		return [ { value, label } ];
+	} );
 
 /* ------------------------------------------------------------------ icone (libreria del tema via REST) */
 

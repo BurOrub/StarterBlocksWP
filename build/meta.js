@@ -5,7 +5,13 @@
   var { useState, useEffect } = wp.element;
   var { useSelect } = wp.data;
   var apiFetch = wp.apiFetch;
-  var toChoices = (obj) => Object.keys(obj || {}).map((value) => ({ value, label: obj[value] }));
+  var toChoices = (obj) => Object.keys(obj || {}).flatMap((value) => {
+    const label = obj[value];
+    if (label && "object" === typeof label) {
+      return [{ value: "__group_" + value, label: value, disabled: true }, ...Object.keys(label).map((v) => ({ value: v, label: "\xA0\xA0" + label[v] }))];
+    }
+    return [{ value, label }];
+  });
   var iconLibrary = null;
   var iconRequest = null;
   function loadIcons() {

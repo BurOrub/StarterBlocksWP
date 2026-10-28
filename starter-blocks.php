@@ -2,7 +2,7 @@
 /**
  * Plugin Name: Starter Blocks
  * Description: Blocchi custom di Gutenberg per il tema Starter.
- * Version: 0.2.1
+ * Version: 0.2.2
  * Requires PHP: 7.4
  * License: GPL v2 or later
  * License URI: https://www.gnu.org/licenses/gpl-2.0.html
