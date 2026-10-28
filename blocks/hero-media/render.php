@@ -40,7 +40,7 @@ $starter_wrapper   = get_block_wrapper_attributes( array( 'class' => 'alignfull 
 
 		<div class="hero-media__text" data-reveal>
 			<div class="page-header__main hero-media__titles">
-				<?php if ( empty( $is_preview ) && get_theme_mod( 'starter_breadcrumbs', false ) ) : ?>
+				<?php if ( empty( $is_preview ) && starter_breadcrumbs_inline_on() ) : ?>
 					<?php starter_page_breadcrumb(); ?>
 				<?php endif; ?>
 				<?php starter_page_header_titles( $starter_eyebrow, $starter_title, true, true ); ?>
