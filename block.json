@@ -1,0 +1,21 @@
+{
+	"name": "starter-theme/elenco-servizi",
+	"apiVersion": 3,
+	"title": "Elenco servizi",
+	"description": "Servizi con foto, testo ed elenco con spunte, e un menu laterale che segue lo scroll (su mobile diventa una barra di icone in basso).",
+	"category": "starter",
+	"icon": "list-view",
+	"keywords": [ "servizi", "elenco", "menu laterale", "tab" ],
+	"supports": {
+		"align": [ "full" ],
+		"anchor": true,
+		"customClassName": true
+	},
+	"textdomain": "slug-theme",
+	"attributes": {
+		"align": { "type": "string", "default": "full" },
+		"name": { "type": "string" },
+		"mode": { "type": "string" },
+		"data": { "type": "object", "default": {} }
+	}
+}
